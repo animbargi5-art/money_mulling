@@ -1,0 +1,31 @@
+RIFT COMPETITION SUBMISSION - ALGOGUARD
+==================================================
+
+Project Name: AlgoGuard - Blockchain Money Muling Detection System
+Description: Decentralized fraud prevention combining AI and blockchain
+Tech Stack: AlgoKit, Algorand Python, Flask, React.js, scikit-learn
+GitHub Repository: https://github.com/animbargi5-art/money_mulling.git
+Live Demo: [To be deployed - next step]
+App ID: [Deploy to testnet - next step]
+Video Demo: [Create LinkedIn video - next step]
+
+RIFT REQUIREMENTS STATUS:
+✅ AlgoKit Framework: Used throughout development
+✅ Smart Contract Language: Algorand Python
+✅ Meaningful Use: Decentralized risk registry with governance
+✅ Public GitHub Repository: COMPLETED
+✅ Complete Source Code: COMPLETED
+✅ Professional Documentation: COMPLETED
+⏳ Testnet App ID: Next step
+⏳ Live Demo URL: Next step  
+⏳ LinkedIn Video: Next step
+
+NEXT ACTIONS:
+1. Deploy smart contract to Algorand Testnet
+2. Deploy frontend for live demo
+3. Create LinkedIn demonstration video
+4. Submit to RIFT competition
+
+Generated: $(Get-Date)
+Repository: https://github.com/animbargi5-art/money_mulling.git
+Status: GITHUB UPLOAD COMPLETE ✅
