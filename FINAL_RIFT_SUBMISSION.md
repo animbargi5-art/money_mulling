@@ -21,13 +21,12 @@
 - Deployed on Algorand Testnet
 - Risk registry and governance features
 
-### 🔄 **Live Demo URL** (NEXT STEP)
-**Instructions**: Deploy to Vercel
-1. Go to https://vercel.com/new
-2. Import GitHub repo: `animbargi5-art/money_mulling`
-3. Set root directory: `frontend`
-4. Deploy and copy URL
-5. **Update here**: https://your-app.vercel.app
+### ✅ **Live Demo URL** (COMPLETED)
+**URL**: https://money-mulling-vgus-l9ecpt97-animbargi5-arts-projects.vercel.app
+- AlgoGuard frontend deployed successfully
+- Professional React.js interface
+- Real-time transaction analysis
+- Algorand integration features
 
 ### 🔄 **LinkedIn Video** (NEXT STEP)
 **Requirements**: 2-3 minute demonstration
@@ -134,7 +133,7 @@
 - [x] **Smart Contract**: Ready with mock App ID
 - [x] **System Testing**: All components verified
 - [x] **Production Build**: Frontend ready for deployment
-- [ ] **Live Demo**: Deploy to Vercel (15 minutes)
+- [x] **Live Demo**: ✅ DEPLOYED - https://money-mulling-vgus-l9ecpt97-animbargi5-arts-projects.vercel.app
 - [ ] **LinkedIn Video**: Record demonstration (30 minutes)
 - [ ] **RIFT Submission**: Complete form (5 minutes)
 

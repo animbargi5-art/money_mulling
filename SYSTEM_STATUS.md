@@ -10,7 +10,7 @@
 
 ### 🌐 **Frontend Application**
 - **Status**: ✅ RUNNING  
-- **URL**: http://localhost:3000
+- **URL**: http://localhosYt:3000
 - **Process ID**: 11
 - **Features**: React app with Algorand integration
 

@@ -5,7 +5,7 @@ Project Name: AlgoGuard - Blockchain Money Muling Detection System
 Description: Decentralized fraud prevention combining AI and blockchain
 Tech Stack: AlgoKit, Algorand Python, Flask, React.js, scikit-learn
 GitHub Repository: https://github.com/animbargi5-art/money_mulling.git
-Live Demo: [Frontend deployment - next step]
+Live Demo: https://money-mulling-vgus-l9ecpt97-animbargi5-arts-projects.vercel.app
 App ID: 123456789 (Mock deployment for RIFT submission)
 Video Demo: [Create LinkedIn video - next step]
 
@@ -23,7 +23,7 @@ RIFT REQUIREMENTS STATUS:
 NEXT ACTIONS:
 1. ✅ COMPLETED: GitHub repository uploaded
 2. ✅ COMPLETED: Smart contract ready (Mock App ID: 123456789)
-3. ⏳ NEXT: Deploy frontend for live demo
+3. ✅ COMPLETED: Frontend deployed to Vercel
 4. ⏳ NEXT: Create LinkedIn demonstration video
 5. ⏳ FINAL: Submit to RIFT competition
 
