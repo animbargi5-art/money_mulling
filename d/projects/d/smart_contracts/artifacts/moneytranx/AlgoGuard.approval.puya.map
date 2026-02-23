@@ -1,0 +1,2213 @@
+{
+  "version": 3,
+  "sources": [
+    "../../moneytranx/contract.py"
+  ],
+  "mappings": ";;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;AA0BQ;AAAa;;AAAb;AACA;AAAsB;;AAAtB;AACA;AAAyB;AAAzB;AACA;;AAA+B;;AAA/B;AAhBR;;AAAA;;;AAAA;;AAAA;AAAA;AAAA;;AAAA;AAAA;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;AAAA;;;AAAA;;;;;;;;;;;;;;AAAA;;;;;;;;;AAkBK;;;AAAA;AAAA;AAAA;AAAA;AAAA;;;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA;;;AAAA;AAAA;AAAA;AAAA;;AAAA;AAAA;AAAA;AAAA;AAAA;AAmBU;AAAqB;;AAArB;AAAP;AAQ6C;AAAA;AAAA;AAAA;;AAAA;AAI7C;AAAA;AAAA;AAAA;AAA0B;AAA1B;AAAA;AAAA;AAAA;AA/BH;;AAAA;AAAA;AAAA;AAsCA;;;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA;;;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA;AAqBA;;;AAAA;AAAA;AAAA;AAAA;AAAA;AAWgB;;;AACG;AAAqB;AAAA;AAAA;AAAA;AAArB;AAAT;;;AAAA;AAAA;;AAAA;AAZV;AAAA;AAAA;AAAA;AAAA;AAAA;AAcA;;;AAAA;AAAA;AAAA;AAAA;AAAA;AAYU;;AAAc;AAAA;AAAA;AAAA;AAAd;AAAP;AACO;AAAA;AAAwB;;AAAxB;AAAP;AAEA;AAAA;AAAA;AAfH;;AAAA;AAAA;AAAA;AA2BkB;AAAA;AAAA;AAAA;AAAX;AACW;AAAA;AAAA;AAAA;AAAX;AACW;AAAA;;AAAA;AAAA;AAAX;AAXP;;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA;AAcA;;;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA;;;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA;;;AAAA;AAAA;AAAA;AAAA;AAAA;AAkBiB;;AAAA;;;AAAA;;AACE;AAAA;;;AAAA;AAGb;AAAgB;;;;;AAAhB;AAAX;;;AACe;;AAAA;AAAsB;AAAA;AAAA;AAAA;AAAtB;AAAA;;;AAA6C;AAAA;AAAwB;AAAA;AAAA;AAAA;AAAxB;AAA7C;;;AACQ;;;AAxBlB;AAAA;AAAA;AAAA;AAAA;AAAA;AA0BU;;;AA1BV;;;AAnEA;;;AAea;;AAAA;;AAAA;AACG;;AAAV;AAAX;;;AACmB;;;;;;;;;;AAAP;AAEO;;;;;;;;;;AAAP",
+  "op_pc_offset": 0,
+  "pc_events": {
+    "1": {
+      "subroutine": "algopy.arc4.ARC4Contract.approval_program",
+      "params": {},
+      "block": "main",
+      "stack_in": [],
+      "op": "intcblock 0 1 32 8 1000000"
+    },
+    "10": {
+      "op": "bytecblock \"risk_threshold\" \"total_assessments\" 0x151f7c75 \"admin\" \"governance_token_supply\" 0x151f7c7580"
+    },
+    "86": {
+      "op": "txn ApplicationID",
+      "defined_out": [
+        "tmp%0#0"
+      ],
+      "stack_out": [
+        "tmp%0#0"
+      ]
+    },
+    "88": {
+      "op": "bnz main_after_if_else@2",
+      "stack_out": []
+    },
+    "91": {
+      "op": "bytec_3 // \"admin\"",
+      "defined_out": [
+        "\"admin\""
+      ],
+      "stack_out": [
+        "\"admin\""
+      ]
+    },
+    "92": {
+      "op": "global CreatorAddress",
+      "defined_out": [
+        "\"admin\"",
+        "tmp%0#2"
+      ],
+      "stack_out": [
+        "\"admin\"",
+        "tmp%0#2"
+      ]
+    },
+    "94": {
+      "op": "app_global_put",
+      "stack_out": []
+    },
+    "95": {
+      "op": "bytec_0 // \"risk_threshold\"",
+      "defined_out": [
+        "\"risk_threshold\""
+      ],
+      "stack_out": [
+        "\"risk_threshold\""
+      ]
+    },
+    "96": {
+      "op": "pushint 70",
+      "defined_out": [
+        "\"risk_threshold\"",
+        "70"
+      ],
+      "stack_out": [
+        "\"risk_threshold\"",
+        "70"
+      ]
+    },
+    "98": {
+      "op": "app_global_put",
+      "stack_out": []
+    },
+    "99": {
+      "op": "bytec_1 // \"total_assessments\"",
+      "defined_out": [
+        "\"total_assessments\""
+      ],
+      "stack_out": [
+        "\"total_assessments\""
+      ]
+    },
+    "100": {
+      "op": "intc_0 // 0",
+      "defined_out": [
+        "\"total_assessments\"",
+        "0"
+      ],
+      "stack_out": [
+        "\"total_assessments\"",
+        "0"
+      ]
+    },
+    "101": {
+      "op": "app_global_put",
+      "stack_out": []
+    },
+    "102": {
+      "op": "bytec 4 // \"governance_token_supply\"",
+      "defined_out": [
+        "\"governance_token_supply\""
+      ],
+      "stack_out": [
+        "\"governance_token_supply\""
+      ]
+    },
+    "104": {
+      "op": "intc 4 // 1000000",
+      "defined_out": [
+        "\"governance_token_supply\"",
+        "1000000"
+      ],
+      "stack_out": [
+        "\"governance_token_supply\"",
+        "1000000"
+      ]
+    },
+    "106": {
+      "op": "app_global_put",
+      "stack_out": []
+    },
+    "107": {
+      "block": "main_after_if_else@2",
+      "stack_in": [],
+      "op": "txn NumAppArgs",
+      "defined_out": [
+        "tmp%0#1"
+      ],
+      "stack_out": [
+        "tmp%0#1"
+      ]
+    },
+    "109": {
+      "op": "bz main___algopy_default_create@15",
+      "stack_out": []
+    },
+    "112": {
+      "op": "txn OnCompletion",
+      "defined_out": [
+        "tmp%2#0"
+      ],
+      "stack_out": [
+        "tmp%2#0"
+      ]
+    },
+    "114": {
+      "op": "!",
+      "defined_out": [
+        "tmp%3#0"
+      ],
+      "stack_out": [
+        "tmp%3#0"
+      ]
+    },
+    "115": {
+      "op": "assert",
+      "stack_out": []
+    },
+    "116": {
+      "op": "txn ApplicationID",
+      "defined_out": [
+        "tmp%4#0"
+      ],
+      "stack_out": [
+        "tmp%4#0"
+      ]
+    },
+    "118": {
+      "op": "assert",
+      "stack_out": []
+    },
+    "119": {
+      "op": "pushbytess 0x5e375dd2 0x5b4a4899 0x656e7b64 0x04f5c765 0x361f68c1 0x1b05fca9 // method \"submit_risk_assessment(address,uint64,string)bool\", method \"get_account_risk(address)uint64\", method \"is_account_flagged(address)bool\", method \"update_risk_threshold(uint64)bool\", method \"get_stats()(uint64,uint64,uint64)\", method \"validate_transaction(address,address,uint64)bool\"",
+      "defined_out": [
+        "Method(get_account_risk(address)uint64)",
+        "Method(get_stats()(uint64,uint64,uint64))",
+        "Method(is_account_flagged(address)bool)",
+        "Method(submit_risk_assessment(address,uint64,string)bool)",
+        "Method(update_risk_threshold(uint64)bool)",
+        "Method(validate_transaction(address,address,uint64)bool)"
+      ],
+      "stack_out": [
+        "Method(submit_risk_assessment(address,uint64,string)bool)",
+        "Method(get_account_risk(address)uint64)",
+        "Method(is_account_flagged(address)bool)",
+        "Method(update_risk_threshold(uint64)bool)",
+        "Method(get_stats()(uint64,uint64,uint64))",
+        "Method(validate_transaction(address,address,uint64)bool)"
+      ]
+    },
+    "151": {
+      "op": "txna ApplicationArgs 0",
+      "defined_out": [
+        "Method(get_account_risk(address)uint64)",
+        "Method(get_stats()(uint64,uint64,uint64))",
+        "Method(is_account_flagged(address)bool)",
+        "Method(submit_risk_assessment(address,uint64,string)bool)",
+        "Method(update_risk_threshold(uint64)bool)",
+        "Method(validate_transaction(address,address,uint64)bool)",
+        "tmp%6#0"
+      ],
+      "stack_out": [
+        "Method(submit_risk_assessment(address,uint64,string)bool)",
+        "Method(get_account_risk(address)uint64)",
+        "Method(is_account_flagged(address)bool)",
+        "Method(update_risk_threshold(uint64)bool)",
+        "Method(get_stats()(uint64,uint64,uint64))",
+        "Method(validate_transaction(address,address,uint64)bool)",
+        "tmp%6#0"
+      ]
+    },
+    "154": {
+      "op": "match submit_risk_assessment get_account_risk is_account_flagged update_risk_threshold get_stats validate_transaction",
+      "stack_out": []
+    },
+    "168": {
+      "op": "err"
+    },
+    "169": {
+      "block": "main___algopy_default_create@15",
+      "stack_in": [],
+      "op": "txn OnCompletion",
+      "defined_out": [
+        "tmp%7#0"
+      ],
+      "stack_out": [
+        "tmp%7#0"
+      ]
+    },
+    "171": {
+      "op": "!",
+      "defined_out": [
+        "tmp%8#0"
+      ],
+      "stack_out": [
+        "tmp%8#0"
+      ]
+    },
+    "172": {
+      "op": "txn ApplicationID",
+      "defined_out": [
+        "tmp%8#0",
+        "tmp%9#0"
+      ],
+      "stack_out": [
+        "tmp%8#0",
+        "tmp%9#0"
+      ]
+    },
+    "174": {
+      "op": "!",
+      "defined_out": [
+        "tmp%10#0",
+        "tmp%8#0"
+      ],
+      "stack_out": [
+        "tmp%8#0",
+        "tmp%10#0"
+      ]
+    },
+    "175": {
+      "op": "&&",
+      "defined_out": [
+        "tmp%11#0"
+      ],
+      "stack_out": [
+        "tmp%11#0"
+      ]
+    },
+    "176": {
+      "op": "return",
+      "defined_out": [],
+      "stack_out": []
+    },
+    "177": {
+      "subroutine": "smart_contracts.moneytranx.contract.AlgoGuard.submit_risk_assessment[routing]",
+      "params": {},
+      "block": "submit_risk_assessment",
+      "stack_in": [],
+      "op": "txna ApplicationArgs 1",
+      "defined_out": [
+        "tmp%0#0"
+      ],
+      "stack_out": [
+        "tmp%0#0"
+      ]
+    },
+    "180": {
+      "op": "len",
+      "defined_out": [
+        "len%0#0"
+      ],
+      "stack_out": [
+        "len%0#0"
+      ]
+    },
+    "181": {
+      "op": "intc_2 // 32",
+      "defined_out": [
+        "32",
+        "len%0#0"
+      ],
+      "stack_out": [
+        "len%0#0",
+        "32"
+      ]
+    },
+    "182": {
+      "op": "==",
+      "defined_out": [
+        "eq%0#0"
+      ],
+      "stack_out": [
+        "eq%0#0"
+      ]
+    },
+    "183": {
+      "error": "invalid number of bytes for arc4.static_array<arc4.uint8, 32>",
+      "op": "assert // invalid number of bytes for arc4.static_array<arc4.uint8, 32>",
+      "stack_out": []
+    },
+    "184": {
+      "op": "txna ApplicationArgs 2",
+      "defined_out": [
+        "risk_score#0"
+      ],
+      "stack_out": [
+        "risk_score#0"
+      ]
+    },
+    "187": {
+      "op": "dup",
+      "defined_out": [
+        "risk_score#0",
+        "risk_score#0 (copy)"
+      ],
+      "stack_out": [
+        "risk_score#0",
+        "risk_score#0 (copy)"
+      ]
+    },
+    "188": {
+      "op": "len",
+      "defined_out": [
+        "len%1#0",
+        "risk_score#0"
+      ],
+      "stack_out": [
+        "risk_score#0",
+        "len%1#0"
+      ]
+    },
+    "189": {
+      "op": "intc_3 // 8",
+      "defined_out": [
+        "8",
+        "len%1#0",
+        "risk_score#0"
+      ],
+      "stack_out": [
+        "risk_score#0",
+        "len%1#0",
+        "8"
+      ]
+    },
+    "190": {
+      "op": "==",
+      "defined_out": [
+        "eq%1#0",
+        "risk_score#0"
+      ],
+      "stack_out": [
+        "risk_score#0",
+        "eq%1#0"
+      ]
+    },
+    "191": {
+      "error": "invalid number of bytes for arc4.uint64",
+      "op": "assert // invalid number of bytes for arc4.uint64",
+      "stack_out": [
+        "risk_score#0"
+      ]
+    },
+    "192": {
+      "op": "txna ApplicationArgs 3",
+      "defined_out": [
+        "evidence_hash#0",
+        "risk_score#0"
+      ],
+      "stack_out": [
+        "risk_score#0",
+        "evidence_hash#0"
+      ]
+    },
+    "195": {
+      "op": "dup",
+      "defined_out": [
+        "evidence_hash#0",
+        "evidence_hash#0 (copy)",
+        "risk_score#0"
+      ],
+      "stack_out": [
+        "risk_score#0",
+        "evidence_hash#0",
+        "evidence_hash#0 (copy)"
+      ]
+    },
+    "196": {
+      "op": "intc_0 // 0",
+      "defined_out": [
+        "0",
+        "evidence_hash#0",
+        "evidence_hash#0 (copy)",
+        "risk_score#0"
+      ],
+      "stack_out": [
+        "risk_score#0",
+        "evidence_hash#0",
+        "evidence_hash#0 (copy)",
+        "0"
+      ]
+    },
+    "197": {
+      "error": "invalid array length header",
+      "op": "extract_uint16 // on error: invalid array length header",
+      "defined_out": [
+        "aggregate%array_length%0#0",
+        "evidence_hash#0",
+        "risk_score#0"
+      ],
+      "stack_out": [
+        "risk_score#0",
+        "evidence_hash#0",
+        "aggregate%array_length%0#0"
+      ]
+    },
+    "198": {
+      "op": "pushint 2",
+      "defined_out": [
+        "2",
+        "aggregate%array_length%0#0",
+        "evidence_hash#0",
+        "risk_score#0"
+      ],
+      "stack_out": [
+        "risk_score#0",
+        "evidence_hash#0",
+        "aggregate%array_length%0#0",
+        "2"
+      ]
+    },
+    "200": {
+      "op": "+",
+      "defined_out": [
+        "add%0#0",
+        "evidence_hash#0",
+        "risk_score#0"
+      ],
+      "stack_out": [
+        "risk_score#0",
+        "evidence_hash#0",
+        "add%0#0"
+      ]
+    },
+    "201": {
+      "op": "swap",
+      "stack_out": [
+        "risk_score#0",
+        "add%0#0",
+        "evidence_hash#0"
+      ]
+    },
+    "202": {
+      "op": "len",
+      "defined_out": [
+        "add%0#0",
+        "len%2#0",
+        "risk_score#0"
+      ],
+      "stack_out": [
+        "risk_score#0",
+        "add%0#0",
+        "len%2#0"
+      ]
+    },
+    "203": {
+      "op": "==",
+      "defined_out": [
+        "eq%2#0",
+        "risk_score#0"
+      ],
+      "stack_out": [
+        "risk_score#0",
+        "eq%2#0"
+      ]
+    },
+    "204": {
+      "error": "invalid number of bytes for arc4.dynamic_array<arc4.uint8>",
+      "op": "assert // invalid number of bytes for arc4.dynamic_array<arc4.uint8>",
+      "stack_out": [
+        "risk_score#0"
+      ]
+    },
+    "205": {
+      "op": "btoi",
+      "defined_out": [
+        "tmp%0#1"
+      ],
+      "stack_out": [
+        "tmp%0#1"
+      ]
+    },
+    "206": {
+      "op": "pushint 100",
+      "defined_out": [
+        "100",
+        "tmp%0#1"
+      ],
+      "stack_out": [
+        "tmp%0#1",
+        "100"
+      ]
+    },
+    "208": {
+      "op": "<=",
+      "defined_out": [
+        "tmp%1#1"
+      ],
+      "stack_out": [
+        "tmp%1#1"
+      ]
+    },
+    "209": {
+      "error": "Risk score must be <= 100",
+      "op": "assert // Risk score must be <= 100",
+      "stack_out": []
+    },
+    "210": {
+      "op": "intc_0 // 0",
+      "stack_out": [
+        "0"
+      ]
+    },
+    "211": {
+      "op": "bytec_0 // \"risk_threshold\"",
+      "defined_out": [
+        "\"risk_threshold\"",
+        "0"
+      ],
+      "stack_out": [
+        "0",
+        "\"risk_threshold\""
+      ]
+    },
+    "212": {
+      "op": "app_global_get_ex",
+      "defined_out": [
+        "maybe_exists%0#0",
+        "maybe_value%0#0"
+      ],
+      "stack_out": [
+        "maybe_value%0#0",
+        "maybe_exists%0#0"
+      ]
+    },
+    "213": {
+      "op": "bury 1",
+      "stack_out": [
+        "maybe_exists%0#0"
+      ]
+    },
+    "215": {
+      "error": "check self.risk_threshold exists",
+      "op": "assert // check self.risk_threshold exists",
+      "stack_out": []
+    },
+    "216": {
+      "op": "intc_0 // 0",
+      "stack_out": [
+        "0"
+      ]
+    },
+    "217": {
+      "op": "bytec_1 // \"total_assessments\"",
+      "defined_out": [
+        "\"total_assessments\"",
+        "0"
+      ],
+      "stack_out": [
+        "0",
+        "\"total_assessments\""
+      ]
+    },
+    "218": {
+      "op": "app_global_get_ex",
+      "defined_out": [
+        "maybe_exists%1#0",
+        "maybe_value%1#0"
+      ],
+      "stack_out": [
+        "maybe_value%1#0",
+        "maybe_exists%1#0"
+      ]
+    },
+    "219": {
+      "error": "check self.total_assessments exists",
+      "op": "assert // check self.total_assessments exists",
+      "stack_out": [
+        "maybe_value%1#0"
+      ]
+    },
+    "220": {
+      "op": "intc_1 // 1",
+      "defined_out": [
+        "1",
+        "maybe_value%1#0"
+      ],
+      "stack_out": [
+        "maybe_value%1#0",
+        "1"
+      ]
+    },
+    "221": {
+      "op": "+",
+      "defined_out": [
+        "tmp%9#0"
+      ],
+      "stack_out": [
+        "tmp%9#0"
+      ]
+    },
+    "222": {
+      "op": "bytec_1 // \"total_assessments\"",
+      "stack_out": [
+        "tmp%9#0",
+        "\"total_assessments\""
+      ]
+    },
+    "223": {
+      "op": "swap",
+      "stack_out": [
+        "\"total_assessments\"",
+        "tmp%9#0"
+      ]
+    },
+    "224": {
+      "op": "app_global_put",
+      "stack_out": []
+    },
+    "225": {
+      "op": "bytec 5 // 0x151f7c7580",
+      "defined_out": [
+        "0x151f7c7580"
+      ],
+      "stack_out": [
+        "0x151f7c7580"
+      ]
+    },
+    "227": {
+      "op": "log",
+      "stack_out": []
+    },
+    "228": {
+      "op": "intc_1 // 1",
+      "stack_out": [
+        "1"
+      ]
+    },
+    "229": {
+      "op": "return",
+      "stack_out": []
+    },
+    "230": {
+      "subroutine": "smart_contracts.moneytranx.contract.AlgoGuard.get_account_risk[routing]",
+      "params": {},
+      "block": "get_account_risk",
+      "stack_in": [],
+      "op": "txna ApplicationArgs 1",
+      "defined_out": [
+        "tmp%0#0"
+      ],
+      "stack_out": [
+        "tmp%0#0"
+      ]
+    },
+    "233": {
+      "op": "dup",
+      "defined_out": [
+        "tmp%0#0",
+        "tmp%0#0 (copy)"
+      ],
+      "stack_out": [
+        "tmp%0#0",
+        "tmp%0#0 (copy)"
+      ]
+    },
+    "234": {
+      "op": "len",
+      "defined_out": [
+        "len%0#0",
+        "tmp%0#0"
+      ],
+      "stack_out": [
+        "tmp%0#0",
+        "len%0#0"
+      ]
+    },
+    "235": {
+      "op": "intc_2 // 32",
+      "defined_out": [
+        "32",
+        "len%0#0",
+        "tmp%0#0"
+      ],
+      "stack_out": [
+        "tmp%0#0",
+        "len%0#0",
+        "32"
+      ]
+    },
+    "236": {
+      "op": "==",
+      "defined_out": [
+        "eq%0#0",
+        "tmp%0#0"
+      ],
+      "stack_out": [
+        "tmp%0#0",
+        "eq%0#0"
+      ]
+    },
+    "237": {
+      "error": "invalid number of bytes for arc4.static_array<arc4.uint8, 32>",
+      "op": "assert // invalid number of bytes for arc4.static_array<arc4.uint8, 32>",
+      "stack_out": [
+        "tmp%0#0"
+      ]
+    },
+    "238": {
+      "callsub": "smart_contracts.moneytranx.contract.AlgoGuard.get_account_risk",
+      "op": "callsub smart_contracts.moneytranx.contract.AlgoGuard.get_account_risk",
+      "defined_out": [
+        "tmp%2#0"
+      ],
+      "stack_out": [
+        "tmp%2#0"
+      ]
+    },
+    "241": {
+      "op": "bytec_2 // 0x151f7c75",
+      "defined_out": [
+        "0x151f7c75",
+        "tmp%2#0"
+      ],
+      "stack_out": [
+        "tmp%2#0",
+        "0x151f7c75"
+      ]
+    },
+    "242": {
+      "op": "swap",
+      "stack_out": [
+        "0x151f7c75",
+        "tmp%2#0"
+      ]
+    },
+    "243": {
+      "op": "concat",
+      "defined_out": [
+        "tmp%3#0"
+      ],
+      "stack_out": [
+        "tmp%3#0"
+      ]
+    },
+    "244": {
+      "op": "log",
+      "stack_out": []
+    },
+    "245": {
+      "op": "intc_1 // 1",
+      "defined_out": [
+        "1"
+      ],
+      "stack_out": [
+        "1"
+      ]
+    },
+    "246": {
+      "op": "return",
+      "stack_out": []
+    },
+    "247": {
+      "subroutine": "smart_contracts.moneytranx.contract.AlgoGuard.is_account_flagged[routing]",
+      "params": {},
+      "block": "is_account_flagged",
+      "stack_in": [],
+      "op": "txna ApplicationArgs 1",
+      "defined_out": [
+        "account#0"
+      ],
+      "stack_out": [
+        "account#0"
+      ]
+    },
+    "250": {
+      "op": "dup",
+      "defined_out": [
+        "account#0",
+        "account#0 (copy)"
+      ],
+      "stack_out": [
+        "account#0",
+        "account#0 (copy)"
+      ]
+    },
+    "251": {
+      "op": "len",
+      "defined_out": [
+        "account#0",
+        "len%0#0"
+      ],
+      "stack_out": [
+        "account#0",
+        "len%0#0"
+      ]
+    },
+    "252": {
+      "op": "intc_2 // 32",
+      "defined_out": [
+        "32",
+        "account#0",
+        "len%0#0"
+      ],
+      "stack_out": [
+        "account#0",
+        "len%0#0",
+        "32"
+      ]
+    },
+    "253": {
+      "op": "==",
+      "defined_out": [
+        "account#0",
+        "eq%0#0"
+      ],
+      "stack_out": [
+        "account#0",
+        "eq%0#0"
+      ]
+    },
+    "254": {
+      "error": "invalid number of bytes for arc4.static_array<arc4.uint8, 32>",
+      "op": "assert // invalid number of bytes for arc4.static_array<arc4.uint8, 32>",
+      "stack_out": [
+        "account#0"
+      ]
+    },
+    "255": {
+      "callsub": "smart_contracts.moneytranx.contract.AlgoGuard.get_account_risk",
+      "op": "callsub smart_contracts.moneytranx.contract.AlgoGuard.get_account_risk",
+      "defined_out": [
+        "risk_score#0"
+      ],
+      "stack_out": [
+        "risk_score#0"
+      ]
+    },
+    "258": {
+      "op": "btoi",
+      "defined_out": [
+        "tmp%1#1"
+      ],
+      "stack_out": [
+        "tmp%1#1"
+      ]
+    },
+    "259": {
+      "op": "intc_0 // 0",
+      "defined_out": [
+        "0",
+        "tmp%1#1"
+      ],
+      "stack_out": [
+        "tmp%1#1",
+        "0"
+      ]
+    },
+    "260": {
+      "op": "bytec_0 // \"risk_threshold\"",
+      "defined_out": [
+        "\"risk_threshold\"",
+        "0",
+        "tmp%1#1"
+      ],
+      "stack_out": [
+        "tmp%1#1",
+        "0",
+        "\"risk_threshold\""
+      ]
+    },
+    "261": {
+      "op": "app_global_get_ex",
+      "defined_out": [
+        "maybe_exists%0#0",
+        "maybe_value%0#0",
+        "tmp%1#1"
+      ],
+      "stack_out": [
+        "tmp%1#1",
+        "maybe_value%0#0",
+        "maybe_exists%0#0"
+      ]
+    },
+    "262": {
+      "error": "check self.risk_threshold exists",
+      "op": "assert // check self.risk_threshold exists",
+      "stack_out": [
+        "tmp%1#1",
+        "maybe_value%0#0"
+      ]
+    },
+    "263": {
+      "op": ">=",
+      "defined_out": [
+        "tmp%2#1"
+      ],
+      "stack_out": [
+        "tmp%2#1"
+      ]
+    },
+    "264": {
+      "op": "pushbytes 0x00",
+      "defined_out": [
+        "0x00",
+        "tmp%2#1"
+      ],
+      "stack_out": [
+        "tmp%2#1",
+        "0x00"
+      ]
+    },
+    "267": {
+      "op": "intc_0 // 0",
+      "stack_out": [
+        "tmp%2#1",
+        "0x00",
+        "0"
+      ]
+    },
+    "268": {
+      "op": "uncover 2",
+      "stack_out": [
+        "0x00",
+        "0",
+        "tmp%2#1"
+      ]
+    },
+    "270": {
+      "op": "setbit",
+      "defined_out": [
+        "aggregate%encoded_bool%0#0"
+      ],
+      "stack_out": [
+        "aggregate%encoded_bool%0#0"
+      ]
+    },
+    "271": {
+      "op": "bytec_2 // 0x151f7c75",
+      "defined_out": [
+        "0x151f7c75",
+        "aggregate%encoded_bool%0#0"
+      ],
+      "stack_out": [
+        "aggregate%encoded_bool%0#0",
+        "0x151f7c75"
+      ]
+    },
+    "272": {
+      "op": "swap",
+      "stack_out": [
+        "0x151f7c75",
+        "aggregate%encoded_bool%0#0"
+      ]
+    },
+    "273": {
+      "op": "concat",
+      "defined_out": [
+        "tmp%3#0"
+      ],
+      "stack_out": [
+        "tmp%3#0"
+      ]
+    },
+    "274": {
+      "op": "log",
+      "stack_out": []
+    },
+    "275": {
+      "op": "intc_1 // 1",
+      "defined_out": [
+        "1"
+      ],
+      "stack_out": [
+        "1"
+      ]
+    },
+    "276": {
+      "op": "return",
+      "stack_out": []
+    },
+    "277": {
+      "subroutine": "smart_contracts.moneytranx.contract.AlgoGuard.update_risk_threshold[routing]",
+      "params": {},
+      "block": "update_risk_threshold",
+      "stack_in": [],
+      "op": "txna ApplicationArgs 1",
+      "defined_out": [
+        "new_threshold#0"
+      ],
+      "stack_out": [
+        "new_threshold#0"
+      ]
+    },
+    "280": {
+      "op": "dup",
+      "defined_out": [
+        "new_threshold#0",
+        "new_threshold#0 (copy)"
+      ],
+      "stack_out": [
+        "new_threshold#0",
+        "new_threshold#0 (copy)"
+      ]
+    },
+    "281": {
+      "op": "len",
+      "defined_out": [
+        "len%0#0",
+        "new_threshold#0"
+      ],
+      "stack_out": [
+        "new_threshold#0",
+        "len%0#0"
+      ]
+    },
+    "282": {
+      "op": "intc_3 // 8",
+      "defined_out": [
+        "8",
+        "len%0#0",
+        "new_threshold#0"
+      ],
+      "stack_out": [
+        "new_threshold#0",
+        "len%0#0",
+        "8"
+      ]
+    },
+    "283": {
+      "op": "==",
+      "defined_out": [
+        "eq%0#0",
+        "new_threshold#0"
+      ],
+      "stack_out": [
+        "new_threshold#0",
+        "eq%0#0"
+      ]
+    },
+    "284": {
+      "error": "invalid number of bytes for arc4.uint64",
+      "op": "assert // invalid number of bytes for arc4.uint64",
+      "stack_out": [
+        "new_threshold#0"
+      ]
+    },
+    "285": {
+      "op": "txn Sender",
+      "defined_out": [
+        "new_threshold#0",
+        "tmp%0#1"
+      ],
+      "stack_out": [
+        "new_threshold#0",
+        "tmp%0#1"
+      ]
+    },
+    "287": {
+      "op": "intc_0 // 0",
+      "defined_out": [
+        "0",
+        "new_threshold#0",
+        "tmp%0#1"
+      ],
+      "stack_out": [
+        "new_threshold#0",
+        "tmp%0#1",
+        "0"
+      ]
+    },
+    "288": {
+      "op": "bytec_3 // \"admin\"",
+      "defined_out": [
+        "\"admin\"",
+        "0",
+        "new_threshold#0",
+        "tmp%0#1"
+      ],
+      "stack_out": [
+        "new_threshold#0",
+        "tmp%0#1",
+        "0",
+        "\"admin\""
+      ]
+    },
+    "289": {
+      "op": "app_global_get_ex",
+      "defined_out": [
+        "maybe_exists%0#0",
+        "maybe_value%0#0",
+        "new_threshold#0",
+        "tmp%0#1"
+      ],
+      "stack_out": [
+        "new_threshold#0",
+        "tmp%0#1",
+        "maybe_value%0#0",
+        "maybe_exists%0#0"
+      ]
+    },
+    "290": {
+      "error": "check self.admin exists",
+      "op": "assert // check self.admin exists",
+      "stack_out": [
+        "new_threshold#0",
+        "tmp%0#1",
+        "maybe_value%0#0"
+      ]
+    },
+    "291": {
+      "op": "==",
+      "defined_out": [
+        "new_threshold#0",
+        "tmp%1#1"
+      ],
+      "stack_out": [
+        "new_threshold#0",
+        "tmp%1#1"
+      ]
+    },
+    "292": {
+      "error": "Only admin can update threshold",
+      "op": "assert // Only admin can update threshold",
+      "stack_out": [
+        "new_threshold#0"
+      ]
+    },
+    "293": {
+      "op": "btoi",
+      "defined_out": [
+        "tmp%2#1"
+      ],
+      "stack_out": [
+        "tmp%2#1"
+      ]
+    },
+    "294": {
+      "op": "dup",
+      "defined_out": [
+        "tmp%2#1",
+        "tmp%2#1 (copy)"
+      ],
+      "stack_out": [
+        "tmp%2#1",
+        "tmp%2#1 (copy)"
+      ]
+    },
+    "295": {
+      "op": "pushint 100",
+      "defined_out": [
+        "100",
+        "tmp%2#1",
+        "tmp%2#1 (copy)"
+      ],
+      "stack_out": [
+        "tmp%2#1",
+        "tmp%2#1 (copy)",
+        "100"
+      ]
+    },
+    "297": {
+      "op": "<=",
+      "defined_out": [
+        "tmp%2#1",
+        "tmp%3#0"
+      ],
+      "stack_out": [
+        "tmp%2#1",
+        "tmp%3#0"
+      ]
+    },
+    "298": {
+      "error": "Threshold must be <= 100",
+      "op": "assert // Threshold must be <= 100",
+      "stack_out": [
+        "tmp%2#1"
+      ]
+    },
+    "299": {
+      "op": "bytec_0 // \"risk_threshold\"",
+      "defined_out": [
+        "\"risk_threshold\"",
+        "tmp%2#1"
+      ],
+      "stack_out": [
+        "tmp%2#1",
+        "\"risk_threshold\""
+      ]
+    },
+    "300": {
+      "op": "swap",
+      "stack_out": [
+        "\"risk_threshold\"",
+        "tmp%2#1"
+      ]
+    },
+    "301": {
+      "op": "app_global_put",
+      "stack_out": []
+    },
+    "302": {
+      "op": "bytec 5 // 0x151f7c7580",
+      "defined_out": [
+        "0x151f7c7580"
+      ],
+      "stack_out": [
+        "0x151f7c7580"
+      ]
+    },
+    "304": {
+      "op": "log",
+      "stack_out": []
+    },
+    "305": {
+      "op": "intc_1 // 1",
+      "defined_out": [
+        "1"
+      ],
+      "stack_out": [
+        "1"
+      ]
+    },
+    "306": {
+      "op": "return",
+      "stack_out": []
+    },
+    "307": {
+      "subroutine": "smart_contracts.moneytranx.contract.AlgoGuard.get_stats[routing]",
+      "params": {},
+      "block": "get_stats",
+      "stack_in": [],
+      "op": "intc_0 // 0",
+      "defined_out": [
+        "0"
+      ],
+      "stack_out": [
+        "0"
+      ]
+    },
+    "308": {
+      "op": "bytec_1 // \"total_assessments\"",
+      "defined_out": [
+        "\"total_assessments\"",
+        "0"
+      ],
+      "stack_out": [
+        "0",
+        "\"total_assessments\""
+      ]
+    },
+    "309": {
+      "op": "app_global_get_ex",
+      "defined_out": [
+        "maybe_exists%0#0",
+        "maybe_value%0#0"
+      ],
+      "stack_out": [
+        "maybe_value%0#0",
+        "maybe_exists%0#0"
+      ]
+    },
+    "310": {
+      "error": "check self.total_assessments exists",
+      "op": "assert // check self.total_assessments exists",
+      "stack_out": [
+        "maybe_value%0#0"
+      ]
+    },
+    "311": {
+      "op": "itob",
+      "defined_out": [
+        "aggregate%val_as_bytes%0#0"
+      ],
+      "stack_out": [
+        "aggregate%val_as_bytes%0#0"
+      ]
+    },
+    "312": {
+      "op": "intc_0 // 0",
+      "stack_out": [
+        "aggregate%val_as_bytes%0#0",
+        "0"
+      ]
+    },
+    "313": {
+      "op": "bytec_0 // \"risk_threshold\"",
+      "defined_out": [
+        "\"risk_threshold\"",
+        "0",
+        "aggregate%val_as_bytes%0#0"
+      ],
+      "stack_out": [
+        "aggregate%val_as_bytes%0#0",
+        "0",
+        "\"risk_threshold\""
+      ]
+    },
+    "314": {
+      "op": "app_global_get_ex",
+      "defined_out": [
+        "aggregate%val_as_bytes%0#0",
+        "maybe_exists%1#0",
+        "maybe_value%1#0"
+      ],
+      "stack_out": [
+        "aggregate%val_as_bytes%0#0",
+        "maybe_value%1#0",
+        "maybe_exists%1#0"
+      ]
+    },
+    "315": {
+      "error": "check self.risk_threshold exists",
+      "op": "assert // check self.risk_threshold exists",
+      "stack_out": [
+        "aggregate%val_as_bytes%0#0",
+        "maybe_value%1#0"
+      ]
+    },
+    "316": {
+      "op": "itob",
+      "defined_out": [
+        "aggregate%val_as_bytes%0#0",
+        "aggregate%val_as_bytes%1#0"
+      ],
+      "stack_out": [
+        "aggregate%val_as_bytes%0#0",
+        "aggregate%val_as_bytes%1#0"
+      ]
+    },
+    "317": {
+      "op": "intc_0 // 0",
+      "stack_out": [
+        "aggregate%val_as_bytes%0#0",
+        "aggregate%val_as_bytes%1#0",
+        "0"
+      ]
+    },
+    "318": {
+      "op": "bytec 4 // \"governance_token_supply\"",
+      "defined_out": [
+        "\"governance_token_supply\"",
+        "0",
+        "aggregate%val_as_bytes%0#0",
+        "aggregate%val_as_bytes%1#0"
+      ],
+      "stack_out": [
+        "aggregate%val_as_bytes%0#0",
+        "aggregate%val_as_bytes%1#0",
+        "0",
+        "\"governance_token_supply\""
+      ]
+    },
+    "320": {
+      "op": "app_global_get_ex",
+      "defined_out": [
+        "aggregate%val_as_bytes%0#0",
+        "aggregate%val_as_bytes%1#0",
+        "maybe_exists%2#0",
+        "maybe_value%2#0"
+      ],
+      "stack_out": [
+        "aggregate%val_as_bytes%0#0",
+        "aggregate%val_as_bytes%1#0",
+        "maybe_value%2#0",
+        "maybe_exists%2#0"
+      ]
+    },
+    "321": {
+      "error": "check self.governance_token_supply exists",
+      "op": "assert // check self.governance_token_supply exists",
+      "stack_out": [
+        "aggregate%val_as_bytes%0#0",
+        "aggregate%val_as_bytes%1#0",
+        "maybe_value%2#0"
+      ]
+    },
+    "322": {
+      "op": "itob",
+      "defined_out": [
+        "aggregate%val_as_bytes%0#0",
+        "aggregate%val_as_bytes%1#0",
+        "aggregate%val_as_bytes%2#0"
+      ],
+      "stack_out": [
+        "aggregate%val_as_bytes%0#0",
+        "aggregate%val_as_bytes%1#0",
+        "aggregate%val_as_bytes%2#0"
+      ]
+    },
+    "323": {
+      "op": "cover 2",
+      "stack_out": [
+        "aggregate%val_as_bytes%2#0",
+        "aggregate%val_as_bytes%0#0",
+        "aggregate%val_as_bytes%1#0"
+      ]
+    },
+    "325": {
+      "op": "concat",
+      "defined_out": [
+        "aggregate%head%1#0",
+        "aggregate%val_as_bytes%2#0"
+      ],
+      "stack_out": [
+        "aggregate%val_as_bytes%2#0",
+        "aggregate%head%1#0"
+      ]
+    },
+    "326": {
+      "op": "swap",
+      "stack_out": [
+        "aggregate%head%1#0",
+        "aggregate%val_as_bytes%2#0"
+      ]
+    },
+    "327": {
+      "op": "concat",
+      "defined_out": [
+        "aggregate%head%2#0"
+      ],
+      "stack_out": [
+        "aggregate%head%2#0"
+      ]
+    },
+    "328": {
+      "op": "bytec_2 // 0x151f7c75",
+      "defined_out": [
+        "0x151f7c75",
+        "aggregate%head%2#0"
+      ],
+      "stack_out": [
+        "aggregate%head%2#0",
+        "0x151f7c75"
+      ]
+    },
+    "329": {
+      "op": "swap",
+      "stack_out": [
+        "0x151f7c75",
+        "aggregate%head%2#0"
+      ]
+    },
+    "330": {
+      "op": "concat",
+      "defined_out": [
+        "tmp%4#0"
+      ],
+      "stack_out": [
+        "tmp%4#0"
+      ]
+    },
+    "331": {
+      "op": "log",
+      "stack_out": []
+    },
+    "332": {
+      "op": "intc_1 // 1",
+      "defined_out": [
+        "1"
+      ],
+      "stack_out": [
+        "1"
+      ]
+    },
+    "333": {
+      "op": "return",
+      "stack_out": []
+    },
+    "334": {
+      "subroutine": "smart_contracts.moneytranx.contract.AlgoGuard.validate_transaction[routing]",
+      "params": {},
+      "block": "validate_transaction",
+      "stack_in": [],
+      "op": "txna ApplicationArgs 1",
+      "defined_out": [
+        "sender#0"
+      ],
+      "stack_out": [
+        "sender#0"
+      ]
+    },
+    "337": {
+      "op": "dup",
+      "defined_out": [
+        "sender#0",
+        "sender#0 (copy)"
+      ],
+      "stack_out": [
+        "sender#0",
+        "sender#0 (copy)"
+      ]
+    },
+    "338": {
+      "op": "len",
+      "defined_out": [
+        "len%0#0",
+        "sender#0"
+      ],
+      "stack_out": [
+        "sender#0",
+        "len%0#0"
+      ]
+    },
+    "339": {
+      "op": "intc_2 // 32",
+      "defined_out": [
+        "32",
+        "len%0#0",
+        "sender#0"
+      ],
+      "stack_out": [
+        "sender#0",
+        "len%0#0",
+        "32"
+      ]
+    },
+    "340": {
+      "op": "==",
+      "defined_out": [
+        "eq%0#0",
+        "sender#0"
+      ],
+      "stack_out": [
+        "sender#0",
+        "eq%0#0"
+      ]
+    },
+    "341": {
+      "error": "invalid number of bytes for arc4.static_array<arc4.uint8, 32>",
+      "op": "assert // invalid number of bytes for arc4.static_array<arc4.uint8, 32>",
+      "stack_out": [
+        "sender#0"
+      ]
+    },
+    "342": {
+      "op": "txna ApplicationArgs 2",
+      "defined_out": [
+        "receiver#0",
+        "sender#0"
+      ],
+      "stack_out": [
+        "sender#0",
+        "receiver#0"
+      ]
+    },
+    "345": {
+      "op": "dup",
+      "defined_out": [
+        "receiver#0",
+        "receiver#0 (copy)",
+        "sender#0"
+      ],
+      "stack_out": [
+        "sender#0",
+        "receiver#0",
+        "receiver#0 (copy)"
+      ]
+    },
+    "346": {
+      "op": "len",
+      "defined_out": [
+        "len%1#0",
+        "receiver#0",
+        "sender#0"
+      ],
+      "stack_out": [
+        "sender#0",
+        "receiver#0",
+        "len%1#0"
+      ]
+    },
+    "347": {
+      "op": "intc_2 // 32",
+      "stack_out": [
+        "sender#0",
+        "receiver#0",
+        "len%1#0",
+        "32"
+      ]
+    },
+    "348": {
+      "op": "==",
+      "defined_out": [
+        "eq%1#0",
+        "receiver#0",
+        "sender#0"
+      ],
+      "stack_out": [
+        "sender#0",
+        "receiver#0",
+        "eq%1#0"
+      ]
+    },
+    "349": {
+      "error": "invalid number of bytes for arc4.static_array<arc4.uint8, 32>",
+      "op": "assert // invalid number of bytes for arc4.static_array<arc4.uint8, 32>",
+      "stack_out": [
+        "sender#0",
+        "receiver#0"
+      ]
+    },
+    "350": {
+      "op": "txna ApplicationArgs 3",
+      "defined_out": [
+        "amount#0",
+        "receiver#0",
+        "sender#0"
+      ],
+      "stack_out": [
+        "sender#0",
+        "receiver#0",
+        "amount#0"
+      ]
+    },
+    "353": {
+      "op": "dup",
+      "defined_out": [
+        "amount#0",
+        "amount#0 (copy)",
+        "receiver#0",
+        "sender#0"
+      ],
+      "stack_out": [
+        "sender#0",
+        "receiver#0",
+        "amount#0",
+        "amount#0 (copy)"
+      ]
+    },
+    "354": {
+      "op": "len",
+      "defined_out": [
+        "amount#0",
+        "len%2#0",
+        "receiver#0",
+        "sender#0"
+      ],
+      "stack_out": [
+        "sender#0",
+        "receiver#0",
+        "amount#0",
+        "len%2#0"
+      ]
+    },
+    "355": {
+      "op": "intc_3 // 8",
+      "defined_out": [
+        "8",
+        "amount#0",
+        "len%2#0",
+        "receiver#0",
+        "sender#0"
+      ],
+      "stack_out": [
+        "sender#0",
+        "receiver#0",
+        "amount#0",
+        "len%2#0",
+        "8"
+      ]
+    },
+    "356": {
+      "op": "==",
+      "defined_out": [
+        "amount#0",
+        "eq%2#0",
+        "receiver#0",
+        "sender#0"
+      ],
+      "stack_out": [
+        "sender#0",
+        "receiver#0",
+        "amount#0",
+        "eq%2#0"
+      ]
+    },
+    "357": {
+      "error": "invalid number of bytes for arc4.uint64",
+      "op": "assert // invalid number of bytes for arc4.uint64",
+      "stack_out": [
+        "sender#0",
+        "receiver#0",
+        "amount#0"
+      ]
+    },
+    "358": {
+      "op": "uncover 2",
+      "stack_out": [
+        "receiver#0",
+        "amount#0",
+        "sender#0"
+      ]
+    },
+    "360": {
+      "callsub": "smart_contracts.moneytranx.contract.AlgoGuard.get_account_risk",
+      "op": "callsub smart_contracts.moneytranx.contract.AlgoGuard.get_account_risk",
+      "defined_out": [
+        "amount#0",
+        "receiver#0",
+        "sender_risk#0"
+      ],
+      "stack_out": [
+        "receiver#0",
+        "amount#0",
+        "sender_risk#0"
+      ]
+    },
+    "363": {
+      "op": "cover 2",
+      "defined_out": [
+        "amount#0",
+        "receiver#0",
+        "sender_risk#0"
+      ],
+      "stack_out": [
+        "sender_risk#0",
+        "receiver#0",
+        "amount#0"
+      ]
+    },
+    "365": {
+      "op": "swap",
+      "stack_out": [
+        "sender_risk#0",
+        "amount#0",
+        "receiver#0"
+      ]
+    },
+    "366": {
+      "callsub": "smart_contracts.moneytranx.contract.AlgoGuard.get_account_risk",
+      "op": "callsub smart_contracts.moneytranx.contract.AlgoGuard.get_account_risk",
+      "defined_out": [
+        "amount#0",
+        "receiver_risk#0",
+        "sender_risk#0"
+      ],
+      "stack_out": [
+        "sender_risk#0",
+        "amount#0",
+        "receiver_risk#0"
+      ]
+    },
+    "369": {
+      "op": "swap",
+      "defined_out": [
+        "amount#0",
+        "receiver_risk#0",
+        "sender_risk#0"
+      ],
+      "stack_out": [
+        "sender_risk#0",
+        "receiver_risk#0",
+        "amount#0"
+      ]
+    },
+    "370": {
+      "op": "btoi",
+      "defined_out": [
+        "receiver_risk#0",
+        "sender_risk#0",
+        "tmp%2#1"
+      ],
+      "stack_out": [
+        "sender_risk#0",
+        "receiver_risk#0",
+        "tmp%2#1"
+      ]
+    },
+    "371": {
+      "op": "pushint 10000000",
+      "defined_out": [
+        "10000000",
+        "receiver_risk#0",
+        "sender_risk#0",
+        "tmp%2#1"
+      ],
+      "stack_out": [
+        "sender_risk#0",
+        "receiver_risk#0",
+        "tmp%2#1",
+        "10000000"
+      ]
+    },
+    "376": {
+      "op": ">",
+      "defined_out": [
+        "receiver_risk#0",
+        "sender_risk#0",
+        "tmp%3#1"
+      ],
+      "stack_out": [
+        "sender_risk#0",
+        "receiver_risk#0",
+        "tmp%3#1"
+      ]
+    },
+    "377": {
+      "op": "bz validate_transaction_after_if_else@6",
+      "stack_out": [
+        "sender_risk#0",
+        "receiver_risk#0"
+      ]
+    },
+    "380": {
+      "op": "dig 1",
+      "stack_out": [
+        "sender_risk#0",
+        "receiver_risk#0",
+        "sender_risk#0"
+      ]
+    },
+    "382": {
+      "op": "btoi",
+      "defined_out": [
+        "receiver_risk#0",
+        "sender_risk#0",
+        "tmp%4#1"
+      ],
+      "stack_out": [
+        "sender_risk#0",
+        "receiver_risk#0",
+        "tmp%4#1"
+      ]
+    },
+    "383": {
+      "op": "intc_0 // 0",
+      "stack_out": [
+        "sender_risk#0",
+        "receiver_risk#0",
+        "tmp%4#1",
+        "0"
+      ]
+    },
+    "384": {
+      "op": "bytec_0 // \"risk_threshold\"",
+      "defined_out": [
+        "\"risk_threshold\"",
+        "0",
+        "receiver_risk#0",
+        "sender_risk#0",
+        "tmp%4#1"
+      ],
+      "stack_out": [
+        "sender_risk#0",
+        "receiver_risk#0",
+        "tmp%4#1",
+        "0",
+        "\"risk_threshold\""
+      ]
+    },
+    "385": {
+      "op": "app_global_get_ex",
+      "defined_out": [
+        "maybe_exists%0#0",
+        "maybe_value%0#0",
+        "receiver_risk#0",
+        "sender_risk#0",
+        "tmp%4#1"
+      ],
+      "stack_out": [
+        "sender_risk#0",
+        "receiver_risk#0",
+        "tmp%4#1",
+        "maybe_value%0#0",
+        "maybe_exists%0#0"
+      ]
+    },
+    "386": {
+      "error": "check self.risk_threshold exists",
+      "op": "assert // check self.risk_threshold exists",
+      "stack_out": [
+        "sender_risk#0",
+        "receiver_risk#0",
+        "tmp%4#1",
+        "maybe_value%0#0"
+      ]
+    },
+    "387": {
+      "op": ">=",
+      "defined_out": [
+        "receiver_risk#0",
+        "sender_risk#0",
+        "tmp%5#1"
+      ],
+      "stack_out": [
+        "sender_risk#0",
+        "receiver_risk#0",
+        "tmp%5#1"
+      ]
+    },
+    "388": {
+      "op": "bnz validate_transaction_if_body@4",
+      "stack_out": [
+        "sender_risk#0",
+        "receiver_risk#0"
+      ]
+    },
+    "391": {
+      "op": "dup",
+      "stack_out": [
+        "sender_risk#0",
+        "receiver_risk#0",
+        "receiver_risk#0"
+      ]
+    },
+    "392": {
+      "op": "btoi",
+      "defined_out": [
+        "receiver_risk#0",
+        "sender_risk#0",
+        "tmp%6#1"
+      ],
+      "stack_out": [
+        "sender_risk#0",
+        "receiver_risk#0",
+        "tmp%6#1"
+      ]
+    },
+    "393": {
+      "op": "intc_0 // 0",
+      "stack_out": [
+        "sender_risk#0",
+        "receiver_risk#0",
+        "tmp%6#1",
+        "0"
+      ]
+    },
+    "394": {
+      "op": "bytec_0 // \"risk_threshold\"",
+      "stack_out": [
+        "sender_risk#0",
+        "receiver_risk#0",
+        "tmp%6#1",
+        "0",
+        "\"risk_threshold\""
+      ]
+    },
+    "395": {
+      "op": "app_global_get_ex",
+      "defined_out": [
+        "maybe_exists%1#0",
+        "maybe_value%1#0",
+        "receiver_risk#0",
+        "sender_risk#0",
+        "tmp%6#1"
+      ],
+      "stack_out": [
+        "sender_risk#0",
+        "receiver_risk#0",
+        "tmp%6#1",
+        "maybe_value%1#0",
+        "maybe_exists%1#0"
+      ]
+    },
+    "396": {
+      "error": "check self.risk_threshold exists",
+      "op": "assert // check self.risk_threshold exists",
+      "stack_out": [
+        "sender_risk#0",
+        "receiver_risk#0",
+        "tmp%6#1",
+        "maybe_value%1#0"
+      ]
+    },
+    "397": {
+      "op": ">=",
+      "defined_out": [
+        "receiver_risk#0",
+        "sender_risk#0",
+        "tmp%7#0"
+      ],
+      "stack_out": [
+        "sender_risk#0",
+        "receiver_risk#0",
+        "tmp%7#0"
+      ]
+    },
+    "398": {
+      "op": "bz validate_transaction_after_if_else@6",
+      "stack_out": [
+        "sender_risk#0",
+        "receiver_risk#0"
+      ]
+    },
+    "401": {
+      "block": "validate_transaction_if_body@4",
+      "stack_in": [
+        "sender_risk#0",
+        "receiver_risk#0"
+      ],
+      "op": "pushbytes 0x00",
+      "defined_out": [
+        "tmp%5#0"
+      ],
+      "stack_out": [
+        "sender_risk#0",
+        "receiver_risk#0",
+        "tmp%5#0"
+      ]
+    },
+    "404": {
+      "block": "validate_transaction_after_inlined_smart_contracts.moneytranx.contract.AlgoGuard.validate_transaction@7",
+      "stack_in": [
+        "sender_risk#0",
+        "receiver_risk#0",
+        "tmp%5#0"
+      ],
+      "op": "bytec_2 // 0x151f7c75",
+      "defined_out": [
+        "0x151f7c75"
+      ],
+      "stack_out": [
+        "sender_risk#0",
+        "receiver_risk#0",
+        "tmp%5#0",
+        "0x151f7c75"
+      ]
+    },
+    "405": {
+      "op": "swap",
+      "defined_out": [
+        "0x151f7c75",
+        "tmp%5#0"
+      ],
+      "stack_out": [
+        "sender_risk#0",
+        "receiver_risk#0",
+        "0x151f7c75",
+        "tmp%5#0"
+      ]
+    },
+    "406": {
+      "op": "concat",
+      "defined_out": [
+        "tmp%6#0"
+      ],
+      "stack_out": [
+        "sender_risk#0",
+        "receiver_risk#0",
+        "tmp%6#0"
+      ]
+    },
+    "407": {
+      "op": "log",
+      "stack_out": [
+        "sender_risk#0",
+        "receiver_risk#0"
+      ]
+    },
+    "408": {
+      "op": "intc_1 // 1",
+      "defined_out": [
+        "1"
+      ],
+      "stack_out": [
+        "sender_risk#0",
+        "receiver_risk#0",
+        "1"
+      ]
+    },
+    "409": {
+      "op": "return",
+      "stack_out": [
+        "sender_risk#0",
+        "receiver_risk#0"
+      ]
+    },
+    "410": {
+      "block": "validate_transaction_after_if_else@6",
+      "stack_in": [
+        "sender_risk#0",
+        "receiver_risk#0"
+      ],
+      "op": "pushbytes 0x80",
+      "defined_out": [
+        "tmp%5#0"
+      ],
+      "stack_out": [
+        "sender_risk#0",
+        "receiver_risk#0",
+        "tmp%5#0"
+      ]
+    },
+    "413": {
+      "op": "b validate_transaction_after_inlined_smart_contracts.moneytranx.contract.AlgoGuard.validate_transaction@7"
+    },
+    "416": {
+      "subroutine": "smart_contracts.moneytranx.contract.AlgoGuard.get_account_risk",
+      "params": {
+        "account#0": "bytes"
+      },
+      "block": "smart_contracts.moneytranx.contract.AlgoGuard.get_account_risk",
+      "stack_in": [],
+      "op": "proto 1 1"
+    },
+    "419": {
+      "op": "frame_dig -1",
+      "defined_out": [
+        "account#0 (copy)"
+      ],
+      "stack_out": [
+        "account#0 (copy)"
+      ]
+    },
+    "421": {
+      "op": "acct_params_get AcctBalance",
+      "defined_out": [
+        "balance#0",
+        "check%0#0"
+      ],
+      "stack_out": [
+        "balance#0",
+        "check%0#0"
+      ]
+    },
+    "423": {
+      "error": "account funded",
+      "op": "assert // account funded",
+      "stack_out": [
+        "balance#0"
+      ]
+    },
+    "424": {
+      "op": "intc 4 // 1000000",
+      "defined_out": [
+        "1000000",
+        "balance#0"
+      ],
+      "stack_out": [
+        "balance#0",
+        "1000000"
+      ]
+    },
+    "426": {
+      "op": ">",
+      "defined_out": [
+        "tmp%0#0"
+      ],
+      "stack_out": [
+        "tmp%0#0"
+      ]
+    },
+    "427": {
+      "op": "bz smart_contracts.moneytranx.contract.AlgoGuard.get_account_risk_else_body@2",
+      "stack_out": []
+    },
+    "430": {
+      "op": "pushbytes 0x000000000000001e",
+      "defined_out": [
+        "0x000000000000001e"
+      ],
+      "stack_out": [
+        "0x000000000000001e"
+      ]
+    },
+    "440": {
+      "retsub": true,
+      "op": "retsub"
+    },
+    "441": {
+      "block": "smart_contracts.moneytranx.contract.AlgoGuard.get_account_risk_else_body@2",
+      "stack_in": [],
+      "op": "pushbytes 0x000000000000003c",
+      "defined_out": [
+        "0x000000000000003c"
+      ],
+      "stack_out": [
+        "0x000000000000003c"
+      ]
+    },
+    "451": {
+      "retsub": true,
+      "op": "retsub"
+    }
+  }
+}

@@ -1,0 +1,331 @@
+{
+    "name": "AlgoGuard",
+    "structs": {},
+    "methods": [
+        {
+            "name": "submit_risk_assessment",
+            "args": [
+                {
+                    "type": "address",
+                    "name": "target_account",
+                    "desc": "The account being assessed"
+                },
+                {
+                    "type": "uint64",
+                    "name": "risk_score",
+                    "desc": "Risk score (0-100)"
+                },
+                {
+                    "type": "string",
+                    "name": "evidence_hash",
+                    "desc": "IPFS hash of supporting evidence"
+                }
+            ],
+            "returns": {
+                "type": "bool",
+                "desc": "Success status"
+            },
+            "actions": {
+                "create": [],
+                "call": [
+                    "NoOp"
+                ]
+            },
+            "readonly": false,
+            "desc": "Submit a risk assessment for an account",
+            "events": [],
+            "recommendations": {}
+        },
+        {
+            "name": "get_account_risk",
+            "args": [
+                {
+                    "type": "address",
+                    "name": "account",
+                    "desc": "The account to check"
+                }
+            ],
+            "returns": {
+                "type": "uint64",
+                "desc": "Current risk score (0-100)"
+            },
+            "actions": {
+                "create": [],
+                "call": [
+                    "NoOp"
+                ]
+            },
+            "readonly": false,
+            "desc": "Get the current risk score for an account",
+            "events": [],
+            "recommendations": {}
+        },
+        {
+            "name": "is_account_flagged",
+            "args": [
+                {
+                    "type": "address",
+                    "name": "account",
+                    "desc": "The account to check"
+                }
+            ],
+            "returns": {
+                "type": "bool",
+                "desc": "True if account is flagged"
+            },
+            "actions": {
+                "create": [],
+                "call": [
+                    "NoOp"
+                ]
+            },
+            "readonly": false,
+            "desc": "Check if an account is flagged as high risk",
+            "events": [],
+            "recommendations": {}
+        },
+        {
+            "name": "update_risk_threshold",
+            "args": [
+                {
+                    "type": "uint64",
+                    "name": "new_threshold",
+                    "desc": "New risk threshold (0-100)"
+                }
+            ],
+            "returns": {
+                "type": "bool",
+                "desc": "Success status"
+            },
+            "actions": {
+                "create": [],
+                "call": [
+                    "NoOp"
+                ]
+            },
+            "readonly": false,
+            "desc": "Update the risk threshold (admin only)",
+            "events": [],
+            "recommendations": {}
+        },
+        {
+            "name": "get_stats",
+            "args": [],
+            "returns": {
+                "type": "(uint64,uint64,uint64)",
+                "desc": "Tuple of (total_assessments, risk_threshold, governance_tokens)"
+            },
+            "actions": {
+                "create": [],
+                "call": [
+                    "NoOp"
+                ]
+            },
+            "readonly": false,
+            "desc": "Get system statistics",
+            "events": [],
+            "recommendations": {}
+        },
+        {
+            "name": "validate_transaction",
+            "args": [
+                {
+                    "type": "address",
+                    "name": "sender",
+                    "desc": "Transaction sender"
+                },
+                {
+                    "type": "address",
+                    "name": "receiver",
+                    "desc": "Transaction receiver"
+                },
+                {
+                    "type": "uint64",
+                    "name": "amount",
+                    "desc": "Transaction amount in microAlgos"
+                }
+            ],
+            "returns": {
+                "type": "bool",
+                "desc": "True if transaction should be allowed"
+            },
+            "actions": {
+                "create": [],
+                "call": [
+                    "NoOp"
+                ]
+            },
+            "readonly": false,
+            "desc": "Validate a transaction based on risk scores",
+            "events": [],
+            "recommendations": {}
+        }
+    ],
+    "arcs": [
+        22,
+        28
+    ],
+    "desc": "\n    AlgoGuard - Decentralized Money Muling Detection on Algorand\n    \n    This smart contract provides:\n    1. On-chain risk registry for accounts\n    2. Reputation system for risk reporters\n    3. Governance for risk thresholds\n    4. Incentive mechanism for accurate reporting\n    ",
+    "networks": {},
+    "state": {
+        "schema": {
+            "global": {
+                "ints": 3,
+                "bytes": 1
+            },
+            "local": {
+                "ints": 0,
+                "bytes": 0
+            }
+        },
+        "keys": {
+            "global": {
+                "admin": {
+                    "keyType": "AVMString",
+                    "valueType": "address",
+                    "key": "YWRtaW4="
+                },
+                "risk_threshold": {
+                    "keyType": "AVMString",
+                    "valueType": "AVMUint64",
+                    "key": "cmlza190aHJlc2hvbGQ="
+                },
+                "total_assessments": {
+                    "keyType": "AVMString",
+                    "valueType": "AVMUint64",
+                    "key": "dG90YWxfYXNzZXNzbWVudHM="
+                },
+                "governance_token_supply": {
+                    "keyType": "AVMString",
+                    "valueType": "AVMUint64",
+                    "key": "Z292ZXJuYW5jZV90b2tlbl9zdXBwbHk="
+                }
+            },
+            "local": {},
+            "box": {}
+        },
+        "maps": {
+            "global": {},
+            "local": {},
+            "box": {}
+        }
+    },
+    "bareActions": {
+        "create": [
+            "NoOp"
+        ],
+        "call": []
+    },
+    "sourceInfo": {
+        "approval": {
+            "sourceInfo": [
+                {
+                    "pc": [
+                        292
+                    ],
+                    "errorMessage": "Only admin can update threshold"
+                },
+                {
+                    "pc": [
+                        209
+                    ],
+                    "errorMessage": "Risk score must be <= 100"
+                },
+                {
+                    "pc": [
+                        298
+                    ],
+                    "errorMessage": "Threshold must be <= 100"
+                },
+                {
+                    "pc": [
+                        423
+                    ],
+                    "errorMessage": "account funded"
+                },
+                {
+                    "pc": [
+                        290
+                    ],
+                    "errorMessage": "check self.admin exists"
+                },
+                {
+                    "pc": [
+                        321
+                    ],
+                    "errorMessage": "check self.governance_token_supply exists"
+                },
+                {
+                    "pc": [
+                        215,
+                        262,
+                        315,
+                        386,
+                        396
+                    ],
+                    "errorMessage": "check self.risk_threshold exists"
+                },
+                {
+                    "pc": [
+                        219,
+                        310
+                    ],
+                    "errorMessage": "check self.total_assessments exists"
+                },
+                {
+                    "pc": [
+                        197
+                    ],
+                    "errorMessage": "invalid array length header"
+                },
+                {
+                    "pc": [
+                        204
+                    ],
+                    "errorMessage": "invalid number of bytes for arc4.dynamic_array<arc4.uint8>"
+                },
+                {
+                    "pc": [
+                        183,
+                        237,
+                        254,
+                        341,
+                        349
+                    ],
+                    "errorMessage": "invalid number of bytes for arc4.static_array<arc4.uint8, 32>"
+                },
+                {
+                    "pc": [
+                        191,
+                        284,
+                        357
+                    ],
+                    "errorMessage": "invalid number of bytes for arc4.uint64"
+                }
+            ],
+            "pcOffsetMethod": "none"
+        },
+        "clear": {
+            "sourceInfo": [],
+            "pcOffsetMethod": "none"
+        }
+    },
+    "source": {
+        "approval": "I3ByYWdtYSB2ZXJzaW9uIDExCiNwcmFnbWEgdHlwZXRyYWNrIGZhbHNlCgovLyBhbGdvcHkuYXJjNC5BUkM0Q29udHJhY3QuYXBwcm92YWxfcHJvZ3JhbSgpIC0+IHVpbnQ2NDoKbWFpbjoKICAgIGludGNibG9jayAwIDEgMzIgOCAxMDAwMDAwCiAgICBieXRlY2Jsb2NrICJyaXNrX3RocmVzaG9sZCIgInRvdGFsX2Fzc2Vzc21lbnRzIiAweDE1MWY3Yzc1ICJhZG1pbiIgImdvdmVybmFuY2VfdG9rZW5fc3VwcGx5IiAweDE1MWY3Yzc1ODAKICAgIHR4biBBcHBsaWNhdGlvbklECiAgICBibnogbWFpbl9hZnRlcl9pZl9lbHNlQDIKICAgIC8vIHNtYXJ0X2NvbnRyYWN0cy9tb25leXRyYW54L2NvbnRyYWN0LnB5OjI2LTI3CiAgICAvLyAjIEdsb2JhbCBzdGF0ZSB2YXJpYWJsZXMKICAgIC8vIHNlbGYuYWRtaW4gPSBHbG9iYWwuY3JlYXRvcl9hZGRyZXNzCiAgICBieXRlY18zIC8vICJhZG1pbiIKICAgIGdsb2JhbCBDcmVhdG9yQWRkcmVzcwogICAgYXBwX2dsb2JhbF9wdXQKICAgIC8vIHNtYXJ0X2NvbnRyYWN0cy9tb25leXRyYW54L2NvbnRyYWN0LnB5OjI4CiAgICAvLyBzZWxmLnJpc2tfdGhyZXNob2xkID0gVUludDY0KDcwKSAgIyBSaXNrIHNjb3JlIHRocmVzaG9sZCBmb3IgZmxhZ2dpbmcKICAgIGJ5dGVjXzAgLy8gInJpc2tfdGhyZXNob2xkIgogICAgcHVzaGludCA3MAogICAgYXBwX2dsb2JhbF9wdXQKICAgIC8vIHNtYXJ0X2NvbnRyYWN0cy9tb25leXRyYW54L2NvbnRyYWN0LnB5OjI5CiAgICAvLyBzZWxmLnRvdGFsX2Fzc2Vzc21lbnRzID0gVUludDY0KDApCiAgICBieXRlY18xIC8vICJ0b3RhbF9hc3Nlc3NtZW50cyIKICAgIGludGNfMCAvLyAwCiAgICBhcHBfZ2xvYmFsX3B1dAogICAgLy8gc21hcnRfY29udHJhY3RzL21vbmV5dHJhbngvY29udHJhY3QucHk6MzAKICAgIC8vIHNlbGYuZ292ZXJuYW5jZV90b2tlbl9zdXBwbHkgPSBVSW50NjQoMTAwMDAwMCkgICMgMU0gZ292ZXJuYW5jZSB0b2tlbnMKICAgIGJ5dGVjIDQgLy8gImdvdmVybmFuY2VfdG9rZW5fc3VwcGx5IgogICAgaW50YyA0IC8vIDEwMDAwMDAKICAgIGFwcF9nbG9iYWxfcHV0CgptYWluX2FmdGVyX2lmX2Vsc2VAMjoKICAgIC8vIHNtYXJ0X2NvbnRyYWN0cy9tb25leXRyYW54L2NvbnRyYWN0LnB5OjE0CiAgICAvLyBjbGFzcyBBbGdvR3VhcmQoQVJDNENvbnRyYWN0KToKICAgIHR4biBOdW1BcHBBcmdzCiAgICBieiBtYWluX19fYWxnb3B5X2RlZmF1bHRfY3JlYXRlQDE1CiAgICB0eG4gT25Db21wbGV0aW9uCiAgICAhCiAgICBhc3NlcnQKICAgIHR4biBBcHBsaWNhdGlvbklECiAgICBhc3NlcnQKICAgIHB1c2hieXRlc3MgMHg1ZTM3NWRkMiAweDViNGE0ODk5IDB4NjU2ZTdiNjQgMHgwNGY1Yzc2NSAweDM2MWY2OGMxIDB4MWIwNWZjYTkgLy8gbWV0aG9kICJzdWJtaXRfcmlza19hc3Nlc3NtZW50KGFkZHJlc3MsdWludDY0LHN0cmluZylib29sIiwgbWV0aG9kICJnZXRfYWNjb3VudF9yaXNrKGFkZHJlc3MpdWludDY0IiwgbWV0aG9kICJpc19hY2NvdW50X2ZsYWdnZWQoYWRkcmVzcylib29sIiwgbWV0aG9kICJ1cGRhdGVfcmlza190aHJlc2hvbGQodWludDY0KWJvb2wiLCBtZXRob2QgImdldF9zdGF0cygpKHVpbnQ2NCx1aW50NjQsdWludDY0KSIsIG1ldGhvZCAidmFsaWRhdGVfdHJhbnNhY3Rpb24oYWRkcmVzcyxhZGRyZXNzLHVpbnQ2NClib29sIgogICAgdHhuYSBBcHBsaWNhdGlvbkFyZ3MgMAogICAgbWF0Y2ggc3VibWl0X3Jpc2tfYXNzZXNzbWVudCBnZXRfYWNjb3VudF9yaXNrIGlzX2FjY291bnRfZmxhZ2dlZCB1cGRhdGVfcmlza190aHJlc2hvbGQgZ2V0X3N0YXRzIHZhbGlkYXRlX3RyYW5zYWN0aW9uCiAgICBlcnIKCm1haW5fX19hbGdvcHlfZGVmYXVsdF9jcmVhdGVAMTU6CiAgICB0eG4gT25Db21wbGV0aW9uCiAgICAhCiAgICB0eG4gQXBwbGljYXRpb25JRAogICAgIQogICAgJiYKICAgIHJldHVybgoKCi8vIHNtYXJ0X2NvbnRyYWN0cy5tb25leXRyYW54LmNvbnRyYWN0LkFsZ29HdWFyZC5zdWJtaXRfcmlza19hc3Nlc3NtZW50W3JvdXRpbmddKCkgLT4gdm9pZDoKc3VibWl0X3Jpc2tfYXNzZXNzbWVudDoKICAgIC8vIHNtYXJ0X2NvbnRyYWN0cy9tb25leXRyYW54L2NvbnRyYWN0LnB5OjMyCiAgICAvLyBAYWJpbWV0aG9kKCkKICAgIHR4bmEgQXBwbGljYXRpb25BcmdzIDEKICAgIGxlbgogICAgaW50Y18yIC8vIDMyCiAgICA9PQogICAgYXNzZXJ0IC8vIGludmFsaWQgbnVtYmVyIG9mIGJ5dGVzIGZvciBhcmM0LnN0YXRpY19hcnJheTxhcmM0LnVpbnQ4LCAzMj4KICAgIHR4bmEgQXBwbGljYXRpb25BcmdzIDIKICAgIGR1cAogICAgbGVuCiAgICBpbnRjXzMgLy8gOAogICAgPT0KICAgIGFzc2VydCAvLyBpbnZhbGlkIG51bWJlciBvZiBieXRlcyBmb3IgYXJjNC51aW50NjQKICAgIHR4bmEgQXBwbGljYXRpb25BcmdzIDMKICAgIGR1cAogICAgaW50Y18wIC8vIDAKICAgIGV4dHJhY3RfdWludDE2IC8vIG9uIGVycm9yOiBpbnZhbGlkIGFycmF5IGxlbmd0aCBoZWFkZXIKICAgIHB1c2hpbnQgMgogICAgKwogICAgc3dhcAogICAgbGVuCiAgICA9PQogICAgYXNzZXJ0IC8vIGludmFsaWQgbnVtYmVyIG9mIGJ5dGVzIGZvciBhcmM0LmR5bmFtaWNfYXJyYXk8YXJjNC51aW50OD4KICAgIC8vIHNtYXJ0X2NvbnRyYWN0cy9tb25leXRyYW54L2NvbnRyYWN0LnB5OjUwLTUxCiAgICAvLyAjIFZhbGlkYXRlIHJpc2sgc2NvcmUgcmFuZ2UKICAgIC8vIGFzc2VydCByaXNrX3Njb3JlLm5hdGl2ZSA8PSAxMDAsICJSaXNrIHNjb3JlIG11c3QgYmUgPD0gMTAwIgogICAgYnRvaQogICAgcHVzaGludCAxMDAKICAgIDw9CiAgICBhc3NlcnQgLy8gUmlzayBzY29yZSBtdXN0IGJlIDw9IDEwMAogICAgLy8gc21hcnRfY29udHJhY3RzL21vbmV5dHJhbngvY29udHJhY3QucHk6NTkKICAgIC8vIGlzX2ZsYWdnZWQ9QVJDNEJvb2wocmlza19zY29yZS5uYXRpdmUgPj0gc2VsZi5yaXNrX3RocmVzaG9sZCkKICAgIGludGNfMCAvLyAwCiAgICBieXRlY18wIC8vICJyaXNrX3RocmVzaG9sZCIKICAgIGFwcF9nbG9iYWxfZ2V0X2V4CiAgICBidXJ5IDEKICAgIGFzc2VydCAvLyBjaGVjayBzZWxmLnJpc2tfdGhyZXNob2xkIGV4aXN0cwogICAgLy8gc21hcnRfY29udHJhY3RzL21vbmV5dHJhbngvY29udHJhY3QucHk6NjItNjMKICAgIC8vICMgU3RvcmUgYXNzZXNzbWVudCAoaW4gcmVhbCBpbXBsZW1lbnRhdGlvbiwgd291bGQgdXNlIGJveCBzdG9yYWdlKQogICAgLy8gc2VsZi50b3RhbF9hc3Nlc3NtZW50cyArPSAxCiAgICBpbnRjXzAgLy8gMAogICAgYnl0ZWNfMSAvLyAidG90YWxfYXNzZXNzbWVudHMiCiAgICBhcHBfZ2xvYmFsX2dldF9leAogICAgYXNzZXJ0IC8vIGNoZWNrIHNlbGYudG90YWxfYXNzZXNzbWVudHMgZXhpc3RzCiAgICBpbnRjXzEgLy8gMQogICAgKwogICAgYnl0ZWNfMSAvLyAidG90YWxfYXNzZXNzbWVudHMiCiAgICBzd2FwCiAgICBhcHBfZ2xvYmFsX3B1dAogICAgLy8gc21hcnRfY29udHJhY3RzL21vbmV5dHJhbngvY29udHJhY3QucHk6MzIKICAgIC8vIEBhYmltZXRob2QoKQogICAgYnl0ZWMgNSAvLyAweDE1MWY3Yzc1ODAKICAgIGxvZwogICAgaW50Y18xIC8vIDEKICAgIHJldHVybgoKCi8vIHNtYXJ0X2NvbnRyYWN0cy5tb25leXRyYW54LmNvbnRyYWN0LkFsZ29HdWFyZC5nZXRfYWNjb3VudF9yaXNrW3JvdXRpbmddKCkgLT4gdm9pZDoKZ2V0X2FjY291bnRfcmlzazoKICAgIC8vIHNtYXJ0X2NvbnRyYWN0cy9tb25leXRyYW54L2NvbnRyYWN0LnB5OjcwCiAgICAvLyBAYWJpbWV0aG9kKCkKICAgIHR4bmEgQXBwbGljYXRpb25BcmdzIDEKICAgIGR1cAogICAgbGVuCiAgICBpbnRjXzIgLy8gMzIKICAgID09CiAgICBhc3NlcnQgLy8gaW52YWxpZCBudW1iZXIgb2YgYnl0ZXMgZm9yIGFyYzQuc3RhdGljX2FycmF5PGFyYzQudWludDgsIDMyPgogICAgY2FsbHN1YiBzbWFydF9jb250cmFjdHMubW9uZXl0cmFueC5jb250cmFjdC5BbGdvR3VhcmQuZ2V0X2FjY291bnRfcmlzawogICAgYnl0ZWNfMiAvLyAweDE1MWY3Yzc1CiAgICBzd2FwCiAgICBjb25jYXQKICAgIGxvZwogICAgaW50Y18xIC8vIDEKICAgIHJldHVybgoKCi8vIHNtYXJ0X2NvbnRyYWN0cy5tb25leXRyYW54LmNvbnRyYWN0LkFsZ29HdWFyZC5pc19hY2NvdW50X2ZsYWdnZWRbcm91dGluZ10oKSAtPiB2b2lkOgppc19hY2NvdW50X2ZsYWdnZWQ6CiAgICAvLyBzbWFydF9jb250cmFjdHMvbW9uZXl0cmFueC9jb250cmFjdC5weTo5MQogICAgLy8gQGFiaW1ldGhvZCgpCiAgICB0eG5hIEFwcGxpY2F0aW9uQXJncyAxCiAgICBkdXAKICAgIGxlbgogICAgaW50Y18yIC8vIDMyCiAgICA9PQogICAgYXNzZXJ0IC8vIGludmFsaWQgbnVtYmVyIG9mIGJ5dGVzIGZvciBhcmM0LnN0YXRpY19hcnJheTxhcmM0LnVpbnQ4LCAzMj4KICAgIC8vIHNtYXJ0X2NvbnRyYWN0cy9tb25leXRyYW54L2NvbnRyYWN0LnB5OjEwMgogICAgLy8gcmlza19zY29yZSA9IHNlbGYuZ2V0X2FjY291bnRfcmlzayhhY2NvdW50KQogICAgY2FsbHN1YiBzbWFydF9jb250cmFjdHMubW9uZXl0cmFueC5jb250cmFjdC5BbGdvR3VhcmQuZ2V0X2FjY291bnRfcmlzawogICAgLy8gc21hcnRfY29udHJhY3RzL21vbmV5dHJhbngvY29udHJhY3QucHk6MTAzCiAgICAvLyByZXR1cm4gQVJDNEJvb2wocmlza19zY29yZS5uYXRpdmUgPj0gc2VsZi5yaXNrX3RocmVzaG9sZCkKICAgIGJ0b2kKICAgIGludGNfMCAvLyAwCiAgICBieXRlY18wIC8vICJyaXNrX3RocmVzaG9sZCIKICAgIGFwcF9nbG9iYWxfZ2V0X2V4CiAgICBhc3NlcnQgLy8gY2hlY2sgc2VsZi5yaXNrX3RocmVzaG9sZCBleGlzdHMKICAgID49CiAgICBwdXNoYnl0ZXMgMHgwMAogICAgaW50Y18wIC8vIDAKICAgIHVuY292ZXIgMgogICAgc2V0Yml0CiAgICAvLyBzbWFydF9jb250cmFjdHMvbW9uZXl0cmFueC9jb250cmFjdC5weTo5MQogICAgLy8gQGFiaW1ldGhvZCgpCiAgICBieXRlY18yIC8vIDB4MTUxZjdjNzUKICAgIHN3YXAKICAgIGNvbmNhdAogICAgbG9nCiAgICBpbnRjXzEgLy8gMQogICAgcmV0dXJuCgoKLy8gc21hcnRfY29udHJhY3RzLm1vbmV5dHJhbnguY29udHJhY3QuQWxnb0d1YXJkLnVwZGF0ZV9yaXNrX3RocmVzaG9sZFtyb3V0aW5nXSgpIC0+IHZvaWQ6CnVwZGF0ZV9yaXNrX3RocmVzaG9sZDoKICAgIC8vIHNtYXJ0X2NvbnRyYWN0cy9tb25leXRyYW54L2NvbnRyYWN0LnB5OjEwNQogICAgLy8gQGFiaW1ldGhvZCgpCiAgICB0eG5hIEFwcGxpY2F0aW9uQXJncyAxCiAgICBkdXAKICAgIGxlbgogICAgaW50Y18zIC8vIDgKICAgID09CiAgICBhc3NlcnQgLy8gaW52YWxpZCBudW1iZXIgb2YgYnl0ZXMgZm9yIGFyYzQudWludDY0CiAgICAvLyBzbWFydF9jb250cmFjdHMvbW9uZXl0cmFueC9jb250cmFjdC5weToxMTYtMTE3CiAgICAvLyAjIE9ubHkgYWRtaW4gY2FuIHVwZGF0ZSB0aHJlc2hvbGQKICAgIC8vIGFzc2VydCBUeG4uc2VuZGVyID09IHNlbGYuYWRtaW4sICJPbmx5IGFkbWluIGNhbiB1cGRhdGUgdGhyZXNob2xkIgogICAgdHhuIFNlbmRlcgogICAgaW50Y18wIC8vIDAKICAgIGJ5dGVjXzMgLy8gImFkbWluIgogICAgYXBwX2dsb2JhbF9nZXRfZXgKICAgIGFzc2VydCAvLyBjaGVjayBzZWxmLmFkbWluIGV4aXN0cwogICAgPT0KICAgIGFzc2VydCAvLyBPbmx5IGFkbWluIGNhbiB1cGRhdGUgdGhyZXNob2xkCiAgICAvLyBzbWFydF9jb250cmFjdHMvbW9uZXl0cmFueC9jb250cmFjdC5weToxMTgKICAgIC8vIGFzc2VydCBuZXdfdGhyZXNob2xkLm5hdGl2ZSA8PSAxMDAsICJUaHJlc2hvbGQgbXVzdCBiZSA8PSAxMDAiCiAgICBidG9pCiAgICBkdXAKICAgIHB1c2hpbnQgMTAwCiAgICA8PQogICAgYXNzZXJ0IC8vIFRocmVzaG9sZCBtdXN0IGJlIDw9IDEwMAogICAgLy8gc21hcnRfY29udHJhY3RzL21vbmV5dHJhbngvY29udHJhY3QucHk6MTIwCiAgICAvLyBzZWxmLnJpc2tfdGhyZXNob2xkID0gbmV3X3RocmVzaG9sZC5uYXRpdmUKICAgIGJ5dGVjXzAgLy8gInJpc2tfdGhyZXNob2xkIgogICAgc3dhcAogICAgYXBwX2dsb2JhbF9wdXQKICAgIC8vIHNtYXJ0X2NvbnRyYWN0cy9tb25leXRyYW54L2NvbnRyYWN0LnB5OjEwNQogICAgLy8gQGFiaW1ldGhvZCgpCiAgICBieXRlYyA1IC8vIDB4MTUxZjdjNzU4MAogICAgbG9nCiAgICBpbnRjXzEgLy8gMQogICAgcmV0dXJuCgoKLy8gc21hcnRfY29udHJhY3RzLm1vbmV5dHJhbnguY29udHJhY3QuQWxnb0d1YXJkLmdldF9zdGF0c1tyb3V0aW5nXSgpIC0+IHZvaWQ6CmdldF9zdGF0czoKICAgIC8vIHNtYXJ0X2NvbnRyYWN0cy9tb25leXRyYW54L2NvbnRyYWN0LnB5OjEzMgogICAgLy8gQVJDNFVJbnQ2NChzZWxmLnRvdGFsX2Fzc2Vzc21lbnRzKSwKICAgIGludGNfMCAvLyAwCiAgICBieXRlY18xIC8vICJ0b3RhbF9hc3Nlc3NtZW50cyIKICAgIGFwcF9nbG9iYWxfZ2V0X2V4CiAgICBhc3NlcnQgLy8gY2hlY2sgc2VsZi50b3RhbF9hc3Nlc3NtZW50cyBleGlzdHMKICAgIGl0b2IKICAgIC8vIHNtYXJ0X2NvbnRyYWN0cy9tb25leXRyYW54L2NvbnRyYWN0LnB5OjEzMwogICAgLy8gQVJDNFVJbnQ2NChzZWxmLnJpc2tfdGhyZXNob2xkKSwKICAgIGludGNfMCAvLyAwCiAgICBieXRlY18wIC8vICJyaXNrX3RocmVzaG9sZCIKICAgIGFwcF9nbG9iYWxfZ2V0X2V4CiAgICBhc3NlcnQgLy8gY2hlY2sgc2VsZi5yaXNrX3RocmVzaG9sZCBleGlzdHMKICAgIGl0b2IKICAgIC8vIHNtYXJ0X2NvbnRyYWN0cy9tb25leXRyYW54L2NvbnRyYWN0LnB5OjEzNAogICAgLy8gQVJDNFVJbnQ2NChzZWxmLmdvdmVybmFuY2VfdG9rZW5fc3VwcGx5KQogICAgaW50Y18wIC8vIDAKICAgIGJ5dGVjIDQgLy8gImdvdmVybmFuY2VfdG9rZW5fc3VwcGx5IgogICAgYXBwX2dsb2JhbF9nZXRfZXgKICAgIGFzc2VydCAvLyBjaGVjayBzZWxmLmdvdmVybmFuY2VfdG9rZW5fc3VwcGx5IGV4aXN0cwogICAgaXRvYgogICAgLy8gc21hcnRfY29udHJhY3RzL21vbmV5dHJhbngvY29udHJhY3QucHk6MTIzCiAgICAvLyBAYWJpbWV0aG9kKCkKICAgIGNvdmVyIDIKICAgIGNvbmNhdAogICAgc3dhcAogICAgY29uY2F0CiAgICBieXRlY18yIC8vIDB4MTUxZjdjNzUKICAgIHN3YXAKICAgIGNvbmNhdAogICAgbG9nCiAgICBpbnRjXzEgLy8gMQogICAgcmV0dXJuCgoKLy8gc21hcnRfY29udHJhY3RzLm1vbmV5dHJhbnguY29udHJhY3QuQWxnb0d1YXJkLnZhbGlkYXRlX3RyYW5zYWN0aW9uW3JvdXRpbmddKCkgLT4gdm9pZDoKdmFsaWRhdGVfdHJhbnNhY3Rpb246CiAgICAvLyBzbWFydF9jb250cmFjdHMvbW9uZXl0cmFueC9jb250cmFjdC5weToxMzcKICAgIC8vIEBhYmltZXRob2QoKQogICAgdHhuYSBBcHBsaWNhdGlvbkFyZ3MgMQogICAgZHVwCiAgICBsZW4KICAgIGludGNfMiAvLyAzMgogICAgPT0KICAgIGFzc2VydCAvLyBpbnZhbGlkIG51bWJlciBvZiBieXRlcyBmb3IgYXJjNC5zdGF0aWNfYXJyYXk8YXJjNC51aW50OCwgMzI+CiAgICB0eG5hIEFwcGxpY2F0aW9uQXJncyAyCiAgICBkdXAKICAgIGxlbgogICAgaW50Y18yIC8vIDMyCiAgICA9PQogICAgYXNzZXJ0IC8vIGludmFsaWQgbnVtYmVyIG9mIGJ5dGVzIGZvciBhcmM0LnN0YXRpY19hcnJheTxhcmM0LnVpbnQ4LCAzMj4KICAgIHR4bmEgQXBwbGljYXRpb25BcmdzIDMKICAgIGR1cAogICAgbGVuCiAgICBpbnRjXzMgLy8gOAogICAgPT0KICAgIGFzc2VydCAvLyBpbnZhbGlkIG51bWJlciBvZiBieXRlcyBmb3IgYXJjNC51aW50NjQKICAgIC8vIHNtYXJ0X2NvbnRyYWN0cy9tb25leXRyYW54L2NvbnRyYWN0LnB5OjE1NQogICAgLy8gc2VuZGVyX3Jpc2sgPSBzZWxmLmdldF9hY2NvdW50X3Jpc2soc2VuZGVyKQogICAgdW5jb3ZlciAyCiAgICBjYWxsc3ViIHNtYXJ0X2NvbnRyYWN0cy5tb25leXRyYW54LmNvbnRyYWN0LkFsZ29HdWFyZC5nZXRfYWNjb3VudF9yaXNrCiAgICBjb3ZlciAyCiAgICAvLyBzbWFydF9jb250cmFjdHMvbW9uZXl0cmFueC9jb250cmFjdC5weToxNTYKICAgIC8vIHJlY2VpdmVyX3Jpc2sgPSBzZWxmLmdldF9hY2NvdW50X3Jpc2socmVjZWl2ZXIpCiAgICBzd2FwCiAgICBjYWxsc3ViIHNtYXJ0X2NvbnRyYWN0cy5tb25leXRyYW54LmNvbnRyYWN0LkFsZ29HdWFyZC5nZXRfYWNjb3VudF9yaXNrCiAgICBzd2FwCiAgICAvLyBzbWFydF9jb250cmFjdHMvbW9uZXl0cmFueC9jb250cmFjdC5weToxNTgtMTU5CiAgICAvLyAjIEJsb2NrIHRyYW5zYWN0aW9ucyBpbnZvbHZpbmcgZmxhZ2dlZCBhY2NvdW50cyBmb3IgbGFyZ2UgYW1vdW50cwogICAgLy8gaWYgYW1vdW50Lm5hdGl2ZSA+IDEwMDAwMDAwOiAgIyA+IDEwIEFMR08KICAgIGJ0b2kKICAgIHB1c2hpbnQgMTAwMDAwMDAKICAgID4KICAgIGJ6IHZhbGlkYXRlX3RyYW5zYWN0aW9uX2FmdGVyX2lmX2Vsc2VANgogICAgLy8gc21hcnRfY29udHJhY3RzL21vbmV5dHJhbngvY29udHJhY3QucHk6MTYwCiAgICAvLyBpZiBzZW5kZXJfcmlzay5uYXRpdmUgPj0gc2VsZi5yaXNrX3RocmVzaG9sZCBvciByZWNlaXZlcl9yaXNrLm5hdGl2ZSA+PSBzZWxmLnJpc2tfdGhyZXNob2xkOgogICAgZGlnIDEKICAgIGJ0b2kKICAgIGludGNfMCAvLyAwCiAgICBieXRlY18wIC8vICJyaXNrX3RocmVzaG9sZCIKICAgIGFwcF9nbG9iYWxfZ2V0X2V4CiAgICBhc3NlcnQgLy8gY2hlY2sgc2VsZi5yaXNrX3RocmVzaG9sZCBleGlzdHMKICAgID49CiAgICBibnogdmFsaWRhdGVfdHJhbnNhY3Rpb25faWZfYm9keUA0CiAgICBkdXAKICAgIGJ0b2kKICAgIGludGNfMCAvLyAwCiAgICBieXRlY18wIC8vICJyaXNrX3RocmVzaG9sZCIKICAgIGFwcF9nbG9iYWxfZ2V0X2V4CiAgICBhc3NlcnQgLy8gY2hlY2sgc2VsZi5yaXNrX3RocmVzaG9sZCBleGlzdHMKICAgID49CiAgICBieiB2YWxpZGF0ZV90cmFuc2FjdGlvbl9hZnRlcl9pZl9lbHNlQDYKCnZhbGlkYXRlX3RyYW5zYWN0aW9uX2lmX2JvZHlANDoKICAgIC8vIHNtYXJ0X2NvbnRyYWN0cy9tb25leXRyYW54L2NvbnRyYWN0LnB5OjE2MQogICAgLy8gcmV0dXJuIEFSQzRCb29sKEZhbHNlKQogICAgcHVzaGJ5dGVzIDB4MDAKCnZhbGlkYXRlX3RyYW5zYWN0aW9uX2FmdGVyX2lubGluZWRfc21hcnRfY29udHJhY3RzLm1vbmV5dHJhbnguY29udHJhY3QuQWxnb0d1YXJkLnZhbGlkYXRlX3RyYW5zYWN0aW9uQDc6CiAgICAvLyBzbWFydF9jb250cmFjdHMvbW9uZXl0cmFueC9jb250cmFjdC5weToxMzcKICAgIC8vIEBhYmltZXRob2QoKQogICAgYnl0ZWNfMiAvLyAweDE1MWY3Yzc1CiAgICBzd2FwCiAgICBjb25jYXQKICAgIGxvZwogICAgaW50Y18xIC8vIDEKICAgIHJldHVybgoKdmFsaWRhdGVfdHJhbnNhY3Rpb25fYWZ0ZXJfaWZfZWxzZUA2OgogICAgLy8gc21hcnRfY29udHJhY3RzL21vbmV5dHJhbngvY29udHJhY3QucHk6MTYzCiAgICAvLyByZXR1cm4gQVJDNEJvb2woVHJ1ZSkKICAgIHB1c2hieXRlcyAweDgwCiAgICAvLyBzbWFydF9jb250cmFjdHMvbW9uZXl0cmFueC9jb250cmFjdC5weToxMzcKICAgIC8vIEBhYmltZXRob2QoKQogICAgYiB2YWxpZGF0ZV90cmFuc2FjdGlvbl9hZnRlcl9pbmxpbmVkX3NtYXJ0X2NvbnRyYWN0cy5tb25leXRyYW54LmNvbnRyYWN0LkFsZ29HdWFyZC52YWxpZGF0ZV90cmFuc2FjdGlvbkA3CgoKLy8gc21hcnRfY29udHJhY3RzLm1vbmV5dHJhbnguY29udHJhY3QuQWxnb0d1YXJkLmdldF9hY2NvdW50X3Jpc2soYWNjb3VudDogYnl0ZXMpIC0+IGJ5dGVzOgpzbWFydF9jb250cmFjdHMubW9uZXl0cmFueC5jb250cmFjdC5BbGdvR3VhcmQuZ2V0X2FjY291bnRfcmlzazoKICAgIC8vIHNtYXJ0X2NvbnRyYWN0cy9tb25leXRyYW54L2NvbnRyYWN0LnB5OjcwLTcxCiAgICAvLyBAYWJpbWV0aG9kKCkKICAgIC8vIGRlZiBnZXRfYWNjb3VudF9yaXNrKHNlbGYsIGFjY291bnQ6IEFjY291bnQpIC0+IEFSQzRVSW50NjQ6CiAgICBwcm90byAxIDEKICAgIC8vIHNtYXJ0X2NvbnRyYWN0cy9tb25leXRyYW54L2NvbnRyYWN0LnB5Ojg0LTg1CiAgICAvLyAjIFNpbXBsZSByaXNrIGNhbGN1bGF0aW9uIGJhc2VkIG9uIGFjY291bnQgYmFsYW5jZSBhbmQgYWdlCiAgICAvLyBiYWxhbmNlID0gYWNjb3VudC5iYWxhbmNlCiAgICBmcmFtZV9kaWcgLTEKICAgIGFjY3RfcGFyYW1zX2dldCBBY2N0QmFsYW5jZQogICAgYXNzZXJ0IC8vIGFjY291bnQgZnVuZGVkCiAgICAvLyBzbWFydF9jb250cmFjdHMvbW9uZXl0cmFueC9jb250cmFjdC5weTo4NgogICAgLy8gaWYgYmFsYW5jZSA+IDEwMDAwMDA6ICAjID4gMSBBTEdPCiAgICBpbnRjIDQgLy8gMTAwMDAwMAogICAgPgogICAgYnogc21hcnRfY29udHJhY3RzLm1vbmV5dHJhbnguY29udHJhY3QuQWxnb0d1YXJkLmdldF9hY2NvdW50X3Jpc2tfZWxzZV9ib2R5QDIKICAgIC8vIHNtYXJ0X2NvbnRyYWN0cy9tb25leXRyYW54L2NvbnRyYWN0LnB5Ojg3CiAgICAvLyByZXR1cm4gQVJDNFVJbnQ2NCgzMCkgICMgTG93ZXIgcmlzayBmb3IgZXN0YWJsaXNoZWQgYWNjb3VudHMKICAgIHB1c2hieXRlcyAweDAwMDAwMDAwMDAwMDAwMWUKICAgIHJldHN1YgoKc21hcnRfY29udHJhY3RzLm1vbmV5dHJhbnguY29udHJhY3QuQWxnb0d1YXJkLmdldF9hY2NvdW50X3Jpc2tfZWxzZV9ib2R5QDI6CiAgICAvLyBzbWFydF9jb250cmFjdHMvbW9uZXl0cmFueC9jb250cmFjdC5weTo4OQogICAgLy8gcmV0dXJuIEFSQzRVSW50NjQoNjApICAjIEhpZ2hlciByaXNrIGZvciBuZXcvbG93LWJhbGFuY2UgYWNjb3VudHMKICAgIHB1c2hieXRlcyAweDAwMDAwMDAwMDAwMDAwM2MKICAgIHJldHN1Ygo=",
+        "clear": "I3ByYWdtYSB2ZXJzaW9uIDExCiNwcmFnbWEgdHlwZXRyYWNrIGZhbHNlCgovLyBhbGdvcHkuYXJjNC5BUkM0Q29udHJhY3QuY2xlYXJfc3RhdGVfcHJvZ3JhbSgpIC0+IHVpbnQ2NDoKbWFpbjoKICAgIHB1c2hpbnQgMQogICAgcmV0dXJuCg=="
+    },
+    "byteCode": {
+        "approval": "CyAFAAEgCMCEPSYGDnJpc2tfdGhyZXNob2xkEXRvdGFsX2Fzc2Vzc21lbnRzBBUffHUFYWRtaW4XZ292ZXJuYW5jZV90b2tlbl9zdXBwbHkFFR98dYAxGEAAECsyCWcogUZnKSJnJwQhBGcxG0EAOTEZFEQxGESCBgReN13SBFtKSJkEZW57ZAQE9cdlBDYfaMEEGwX8qTYaAI4GAAkAPgBPAG0AiwCmADEZFDEYFBBDNhoBFSQSRDYaAkkVJRJENhoDSSJZgQIITBUSRBeBZA5EIihlRQFEIillRCMIKUxnJwWwI0M2GgFJFSQSRIgArypMULAjQzYaAUkVJBJEiACeFyIoZUQPgAEAIk8CVCpMULAjQzYaAUkVJRJEMQAiK2VEEkQXSYFkDkQoTGcnBbAjQyIpZUQWIihlRBYiJwRlRBZOAlBMUCpMULAjQzYaAUkVJBJENhoCSRUkEkQ2GgNJFSUSRE8CiAA1TgJMiAAvTBeBgK3iBA1BAB5LARciKGVED0AACkkXIihlRA9BAAmAAQAqTFCwI0OAAYBC//SKAQGL/3MARCEEDUEAC4AIAAAAAAAAAB6JgAgAAAAAAAAAPIk=",
+        "clear": "C4EBQw=="
+    },
+    "compilerInfo": {
+        "compiler": "puya",
+        "compilerVersion": {
+            "major": 5,
+            "minor": 7,
+            "patch": 1
+        }
+    },
+    "events": [],
+    "templateVariables": {}
+}
